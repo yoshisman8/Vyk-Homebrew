@@ -1,0 +1,63 @@
+{
+	"name": "vyk-homebrew",
+	"title": "Vyklade's Book of Homebrew",
+	"description": "A collection of Homebrew Archetypes for Pathfinder 2nd edition!",
+	"author": "Vyklade",
+	"version": "1.0.0",
+	"minimumCoreVersion": "0.7.0",
+	"system":"pf2e",
+	"url":"https://github.com/yoshisman8/Vyk-Homebrew",
+	"manifest":"",
+	"download":"",
+	"packs": 
+		[
+			{
+				"name": "charge-blade-kinght",
+				"label": "Charge Blade Knight",
+				"path": "packs/charge-blade-knight.db",
+				"system":"pf2e",
+				"entity": "Item",
+				"module": "vyk-homebrew"
+			},
+			{
+				"name": "dancer",
+				"label": "Dancer",
+				"path": "packs/dancer.db",
+				"system":"pf2e",
+				"entity": "Item",
+				"module": "vyk-homebrew"
+			},
+			{
+			  "label": "Gunbreaker",
+			  "entity": "Item",
+			  "name": "gunbreaker-items",
+			  "path": "packs/gunbreaker-items.db",
+			  "system": "pf2e",
+			  "module": "vyk-homebrew"
+			},
+			{
+			  "label": "Gunbreaker Macros",
+			  "entity": "Macro",
+			  "name": "gunbreaker-maros",
+			  "path": "packs/gunbreaker-maros.db",
+			  "system": "pf2e",
+			  "module": "vyk-homebrew"
+			},
+			{
+			  "label": "Dark Knight",
+			  "entity": "Item",
+			  "name": "dark-knight-items",
+			  "path": "packs/dark-knight.db",
+			  "system": "pf2e",
+			  "module": "vyk-homebrew"
+			},
+			{
+			  "label": "Dark Knight Maros",
+			  "entity": "Macro",
+			  "name": "dark-knight-macros",
+			  "path": "packs/dark-knight-macros.db",
+			  "system": "pf2e",
+			  "module": "vyk-homebrew"
+			}
+		]
+}
