@@ -63,7 +63,7 @@
 		"dependencies": [
 			{
 			  "name": "pf2e",
-			  "type": "system",
+			  "type": "system"
 			}
 		]
 }
