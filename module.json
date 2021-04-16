@@ -7,7 +7,7 @@
 	"minimumCoreVersion": "0.7.0",
 	"system":"pf2e",
 	"url":"https://github.com/yoshisman8/Vyk-Homebrew",
-	"manifest":"https://github.com/yoshisman8/Vyk-Homebrew/blob/main/module.json",
+	"manifest":"https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/module.json",
 	"download":"https://github.com/yoshisman8/Vyk-Homebrew/archive/refs/heads/main.zip",
 	"packs": 
 		[
@@ -58,6 +58,12 @@
 			  "path": "packs/dark-knight-macros.db",
 			  "system": "pf2e",
 			  "module": "vyk-homebrew"
+			}
+		],
+		"dependencies": [
+			{
+			  "name": "pf2e",
+			  "type": "system",
 			}
 		]
 }
