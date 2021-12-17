@@ -12,6 +12,7 @@ This pack currently contains the following content:
 
 Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/module.json](https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/module.json)
 
+Icons are from Final Fantasy 14 © Square Enix.
 
 # Changelog
 
