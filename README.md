@@ -1,17 +1,23 @@
 # Vyklade's Book of Homebrew
 
-This module contains a collection of homebrew Pathfinder 2nd Edition Archetypes and Class Archetypes created by Vyklade#0001. You can find the entire collection over at [this](https://scribe.pf2.tools/v/Lpmolb4Q) link!
+This module contains a collection of homebrew Pathfinder 2nd Edition Classes, Archetypes and Class Archetypes created by Vyklade#0001. 
 
-This pack currently contains the following Archetypes/class Archetyes:
+You can find the entire collection over at my [Scribe Page](https://scribe.pf2.tools/v/Lpmolb4Q)!
 
-* [Mystic Knight](https://scribe.pf2.tools/v/69Mdysm6-mystic-knight)
-* [Jeweled Arcanist](https://scribe.pf2.tools/v/4lVFFbQs)
+This pack currently contains the following content:
+
+* [Mystic Knight (Class Archetype)](https://scribe.pf2.tools/v/69Mdysm6-mystic-knight)
+* [Jeweled Arcanist (Class Archetype)](https://scribe.pf2.tools/v/4lVFFbQs)
+* [Reaper (Class)](https://scribe.pf2.tools/v/5mOhtZcQ)
 
 Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/module.json](https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/module.json)
 
-You can also find my [Reaper Homebrew Class](https://gitlab.com/yoshisman8/pf2e-reaper) as its own module you can install!
 
 # Changelog
+
+## Version 1.3
+
+* Added Reaper to the pack
 
 ## Version 1.2
 
