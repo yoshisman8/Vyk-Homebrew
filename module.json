@@ -25,6 +25,14 @@
 		  "path": "packs/mystic-knight-macros.db",
 		  "system": "pf2e",
 		  "module": "vyk-homebrew"
+		},
+		{
+			"name": "jeweled-arcanist",
+			"label": "Jeweled Arcanist",
+			"path": "packs/jeweled-arcanist.db",
+			"system":"pf2e",
+			"entity": "Item",
+			"module": "vyk-homebrew"
 		}
 	],
 	"minimumSystemVersion": "2.16",
