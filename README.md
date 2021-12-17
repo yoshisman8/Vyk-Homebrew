@@ -16,6 +16,11 @@ Icons are from Final Fantasy 14 © Square Enix.
 
 # Changelog
 
+## Version 1.5
+
+* Fixed Toggle Property rule element in Nightmare Slice
+* Fixed Toggle Property rule element in Provoke effects
+
 ## Version 1.4
 
 * Fixed the Reaper class item. The item sitll had the old associations which made it impossible to drag onto characters.
