@@ -16,6 +16,10 @@ Icons are from Final Fantasy 14 © Square Enix.
 
 # Changelog
 
+## Version 1.4
+
+* Fixed the Reaper class item. The item sitll had the old associations which made it impossible to drag onto characters.
+
 ## Version 1.3
 
 * Added Reaper to the pack
