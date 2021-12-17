@@ -33,6 +33,22 @@
 			"system":"pf2e",
 			"entity": "Item",
 			"module": "vyk-homebrew"
+		},
+		{
+			"name": "reaper",
+			"label": "Reaper",
+			"path": "packs/reaper.db",
+			"system":"pf2e",
+			"entity": "Item",
+			"module": "vyk-homebrew"
+		},
+		{
+		  "label": "reaper-macros",
+		  "entity": "Macro",
+		  "name": "reaper-macros",
+		  "path": "packs/reaper-macros.db",
+		  "system": "pf2e",
+		  "module": "vyk-homebrew"
 		}
 	],
 	"minimumSystemVersion": "2.16",
