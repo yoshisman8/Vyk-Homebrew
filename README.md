@@ -10,12 +10,4 @@ Installation url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/mai
 
 Initial release! This version includes the following archetypes:
 
-* Charge Blade Knight
-* Gunbreaker
-* Dancer
-* Dark Knight
-
-This also includes Macros for the following archetypes:
-
-* Gunbreaker
-* Dark Knight
+* [Mystic Knight](https://scribe.pf2.tools/v/69Mdysm6-mystic-knight)

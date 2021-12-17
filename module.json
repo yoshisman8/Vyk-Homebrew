@@ -1,70 +1,46 @@
 {
 	"name": "vyk-homebrew",
 	"title": "Vyklade's Book of Homebrew",
-	"description": "A collection of Homebrew Archetypes for Pathfinder 2nd edition!",
+	"description": "<p>A collection of Homebrew Archetypes created by u/yoshisman8!<p/><p>Find the complete collection over at:</p><p>https://scribe.pf2.tools/v/Lpmolb4Q-vyklade-s-book-of-homebrew</p>",
 	"author": "Vyklade",
-	"version": "1.0.2",
-	"minimumCoreVersion": "0.7.0",
-	"compatibleCoreVersion": "0.7.9",
-	"system":"pf2e",
-	"url":"https://github.com/yoshisman8/Vyk-Homebrew",
-	"manifest":"https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/module.json",
-	"download":"https://github.com/yoshisman8/Vyk-Homebrew/archive/refs/heads/main.zip",
-	"packs": 
-		[
-			{
-				"name": "charge-blade-kinght",
-				"label": "Charge Blade Knight",
-				"path": "packs/charge-blade-knight.db",
-				"system":"pf2e",
-				"entity": "Item",
-				"module": "vyk-homebrew"
-			},
-			{
-				"name": "dancer",
-				"label": "Dancer",
-				"path": "packs/dancer.db",
-				"system":"pf2e",
-				"entity": "Item",
-				"module": "vyk-homebrew"
-			},
-			{
-			  "label": "Gunbreaker",
-			  "entity": "Item",
-			  "name": "gunbreaker-items",
-			  "path": "packs/gunbreaker-items.db",
-			  "system": "pf2e",
-			  "module": "vyk-homebrew"
-			},
-			{
-			  "label": "Gunbreaker Macros",
-			  "entity": "Macro",
-			  "name": "gunbreaker-maros",
-			  "path": "packs/gunbreaker-maros.db",
-			  "system": "pf2e",
-			  "module": "vyk-homebrew"
-			},
-			{
-			  "label": "Dark Knight",
-			  "entity": "Item",
-			  "name": "dark-knight-items",
-			  "path": "packs/dark-knight.db",
-			  "system": "pf2e",
-			  "module": "vyk-homebrew"
-			},
-			{
-			  "label": "Dark Knight Maros",
-			  "entity": "Macro",
-			  "name": "dark-knight-macros",
-			  "path": "packs/dark-knight-macros.db",
-			  "system": "pf2e",
-			  "module": "vyk-homebrew"
+	"version": "1.0",
+	"minimumCoreVersion": "0.8.9",
+	"compatibleCoreVersion": "0.8.9",
+	"system":[
+		"pf2e"
+	],
+	"packs": [
+		{
+			"name": "mystic-knight",
+			"label": "Mystic Knight",
+			"path": "packs/mystic-knight.db",
+			"system":"pf2e",
+			"entity": "Item",
+			"module": "vyk-homebrew"
+		},
+		{
+		  "label": "Mystic Knight Macros",
+		  "entity": "Macro",
+		  "name": "mystic-knight-macros",
+		  "path": "packs/mystic-knight-macros.db",
+		  "system": "pf2e",
+		  "module": "vyk-homebrew"
+		}
+	],
+	"minimumSystemVersion": "2.16",
+	"flags": {
+		"vyk-homebrew": {
+			"pf2e-homebrew": {
+				"featTraits": {
+					"blade-art": {
+						"label":"Blade Art",
+						"description":"<p>Blade Arts are special abilities unique to Mystic Knights. A Blade Art can only be performed once before needing to be <b>Recharge</b>.</p><p>You can Recharge all of your Blade Arts by spending 10 minutes doing the <b>Refocus</b> Activity.</p>"
+					}
+				  }
 			}
-		],
-		"dependencies": [
-			{
-			  "name": "pf2e",
-			  "type": "system"
-			}
-		]
+		}
+	},
+	"url": "https://gitlab.com/yoshisman8/pf2e-reaper/-/tree/main",
+	"manifest": "https://gitlab.com/yoshisman8/pf2e-reaper/-/raw/main/module.json",
+	"download": "https://gitlab.com/yoshisman8/pf2e-reaper/-/archive/main/pf2e-reaper-main.zip"
 }
