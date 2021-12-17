@@ -3,7 +3,7 @@
 	"title": "Vyklade's Book of Homebrew",
 	"description": "<p>A collection of Homebrew Archetypes created by u/yoshisman8!<p/><p>Find the complete collection over at:</p><p>https://scribe.pf2.tools/v/Lpmolb4Q-vyklade-s-book-of-homebrew</p>",
 	"author": "Vyklade",
-	"version": "1.1",
+	"version": "1.2",
 	"minimumCoreVersion": "0.8.9",
 	"compatibleCoreVersion": "0.8.9",
 	"system":[
@@ -44,7 +44,14 @@
 						"label":"Blade Art",
 						"description":"<p>Blade Arts are special abilities unique to Mystic Knights. A Blade Art can only be performed once before needing to be <b>Recharge</b>.</p><p>You can Recharge all of your Blade Arts by spending 10 minutes doing the <b>Refocus</b> Activity.</p>"
 					}
+				  },
+				  "spellTraits": {
+					"egi": {
+						"label":"Egi",
+						"description":"Spells with the Egi trait can only be casted by a Jeweled Egi. The spell still utilizes the master's Spell Attack and Spell DC and uses one of their Focus Points."
+					}
 				  }
+
 			}
 		}
 	},
