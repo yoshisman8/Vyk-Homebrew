@@ -12,7 +12,7 @@ This pack currently contains the following content:
 
 Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/module.json](https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/module.json)
 
-Icons are from Final Fantasy 14 © Square Enix.
+Shard Icons by [Lorc](https://lorcblog.blogspot.com/) under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/).
 
 # Changelog
 
