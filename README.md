@@ -16,6 +16,10 @@ Icons are from Final Fantasy 14 © Square Enix.
 
 # Changelog
 
+## Version 1.6
+
+* Added Mystic Knight class feature that fixes the intitial proficiencies
+
 ## Version 1.5
 
 * Fixed Toggle Property rule element in Nightmare Slice
