@@ -16,6 +16,10 @@ Shard Icons by [Lorc](https://lorcblog.blogspot.com/) under [CC BY 3.0](http://c
 
 # Changelog
 
+## Version 1.7
+
+* Added Reaper Archetype feats and support to Shard and Enshroud macros
+
 ## Version 1.6
 
 * Added Mystic Knight class feature that fixes the intitial proficiencies
