@@ -19,6 +19,7 @@ Icons are from Final Fantasy 14 © Square Enix.
 ## Version 1.6
 
 * Added Mystic Knight class feature that fixes the intitial proficiencies
+* Added missing Expanded Favoritism and Artful Training Mystic Knight feats
 
 ## Version 1.5
 
