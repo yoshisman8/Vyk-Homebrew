@@ -3,7 +3,7 @@
 	"title": "Vyklade's Book of Homebrew",
 	"description": "<p>A collection of Homebrew content created by u/yoshisman8!<p/><p>Find the complete collection over at:</p><p>https://scribe.pf2.tools/v/Lpmolb4Q-vyklade-s-book-of-homebrew</p>",
 	"author": "Vyklade",
-	"version": "1.7",
+	"version": "1.8",
 	"minimumCoreVersion": "0.8.9",
 	"compatibleCoreVersion": "0.8.9",
 	"system":[
@@ -43,7 +43,7 @@
 			"module": "vyk-homebrew"
 		},
 		{
-		  "label": "reaper-macros",
+		  "label": "Reaper Macros",
 		  "entity": "Macro",
 		  "name": "reaper-macros",
 		  "path": "packs/reaper-macros.db",
@@ -57,6 +57,14 @@
 			"system":"pf2e",
 			"entity": "Item",
 			"module": "vyk-homebrew"
+		},
+		{
+		  "label": "Artifact Sage Macros",
+		  "entity": "Macro",
+		  "name": "artifact-sage-macros",
+		  "path": "packs/artifact-sage-macros.db",
+		  "system": "pf2e",
+		  "module": "vyk-homebrew"
 		}
 	],
 	"minimumSystemVersion": "2.16",
@@ -81,6 +89,12 @@
 					},
 					"reaper": "Reaper",
 					"sage":"Sage"
+				  },
+				  "weaponGroups":{
+					  "aegis":"Aegis"
+				  },
+				  "baseWeapons":{
+					  "aegis":"Aegis"
 				  }
 
 			}
