@@ -49,6 +49,14 @@
 		  "path": "packs/reaper-macros.db",
 		  "system": "pf2e",
 		  "module": "vyk-homebrew"
+		},
+		{
+			"name": "artifact-sage",
+			"label": "Artifact Sage",
+			"path": "packs/artifact-sage.db",
+			"system":"pf2e",
+			"entity": "Item",
+			"module": "vyk-homebrew"
 		}
 	],
 	"minimumSystemVersion": "2.16",
@@ -71,7 +79,8 @@
 						"label":"Egi",
 						"description":"Spells with the Egi trait can only be casted by a Jeweled Egi. The spell still utilizes the master's Spell Attack and Spell DC and uses one of their Focus Points."
 					},
-					"reaper": "Reaper"
+					"reaper": "Reaper",
+					"sage":"Sage"
 				  }
 
 			}

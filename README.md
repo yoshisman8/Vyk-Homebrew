@@ -12,7 +12,10 @@ This pack currently contains the following content:
 
 Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/module.json](https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/module.json)
 
-Shard Icons by [Lorc](https://lorcblog.blogspot.com/) under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/).
+## Icon Image Credits
+
+* Shard Icons by [Lorc](https://lorcblog.blogspot.com/) under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/).
+* Painterly Icons by [J. W. Bjerk](https://opengameart.org/content/painterly-spell-icons-part-1) [(Part 2)](http://opengameart.org/content/painterly-spell-icons-part-2) [(Part 3)](http://opengameart.org/content/painterly-spell-icons-part-3) [(Part 4)](http://opengameart.org/content/painterly-spell-icons-part-3) Under [CC 3.0](http://creativecommons.org/licenses/by/3.0/)
 
 # Changelog
 
