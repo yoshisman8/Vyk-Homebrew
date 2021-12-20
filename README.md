@@ -21,6 +21,11 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 
 # Changelog
 
+## Version 1.8.1
+
+* Added "Enshroud" trait
+* Altered Reaper class based on latest changes to Source document.
+
 ## Version 1.8
 
 * Added Artifact Sage to pack

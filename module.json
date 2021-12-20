@@ -3,7 +3,7 @@
 	"title": "Vyklade's Book of Homebrew",
 	"description": "<p>A collection of Homebrew content created by u/yoshisman8!<p/><p>Find the complete collection over at:</p><p>https://scribe.pf2.tools/v/Lpmolb4Q-vyklade-s-book-of-homebrew</p>",
 	"author": "Vyklade",
-	"version": "1.8",
+	"version": "1.8.1",
 	"minimumCoreVersion": "0.8.9",
 	"compatibleCoreVersion": "0.8.9",
 	"system":[
@@ -80,6 +80,10 @@
 					"soul": {
 						"label":"Soul",
 						"description":"<p>An action, feat or spell with the Soul trait requires at least one <b>Soul Shard</b> to be casted or performed.</p>"
+					},
+					"enshroud": {
+						"label":"Enshroud",
+						"description":"<p>An action, feat or spell with the Enshroud trait requires you to be under the effect of Reaper's <b>Enshroud</b> ability.</p>"
 					}
 				  },
 				  "spellTraits": {
