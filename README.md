@@ -21,6 +21,11 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 
 # Changelog
 
+## Version 1.8.3
+
+* Make that two feats
+* Fixed Ruby Stance being labeled as a Bonus Feat
+
 ## Version 1.8.2
 
 * Forgot a single Jeweled Arcanist feat
