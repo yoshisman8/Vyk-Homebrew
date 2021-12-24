@@ -3,7 +3,7 @@
 	"title": "Vyklade's Book of Homebrew",
 	"description": "<p>A collection of Homebrew content created by u/yoshisman8!<p/><p>Find the complete collection over at:</p><p>https://scribe.pf2.tools/v/Lpmolb4Q-vyklade-s-book-of-homebrew</p>",
 	"author": "Vyklade",
-	"version": "1.8.1",
+	"version": "1.8.2",
 	"minimumCoreVersion": "0.8.9",
 	"compatibleCoreVersion": "0.8.9",
 	"system":[
@@ -65,6 +65,22 @@
 		  "path": "packs/artifact-sage-macros.db",
 		  "system": "pf2e",
 		  "module": "vyk-homebrew"
+		},
+		{
+			"name": "charge-blade-knight",
+			"label": "Charge Blade Knight",
+			"path": "packs/charge-blade-knight.db",
+			"system":"pf2e",
+			"entity": "Item",
+			"module": "vyk-homebrew"
+		},
+		{
+		  "label": "Charge Blade Knight Macros",
+		  "entity": "Macro",
+		  "name": "charge-blade-knight-macros",
+		  "path": "packs/charge-blade-knight-macros.db",
+		  "system": "pf2e",
+		  "module": "vyk-homebrew"
 		}
 	],
 	"minimumSystemVersion": "2.16",
@@ -84,6 +100,10 @@
 					"enshroud": {
 						"label":"Enshroud",
 						"description":"<p>An action, feat or spell with the Enshroud trait requires you to be under the effect of Reaper's <b>Enshroud</b> ability.</p>"
+					},
+					"burst":{
+						"label":"Burst",
+						"description":"<p>Actions with the Burst trait require the expenditure of one or more charge blade <b>Charge</b>. This action expends </p>"
 					}
 				  },
 				  "spellTraits": {
@@ -94,11 +114,18 @@
 					"reaper": "Reaper",
 					"sage":"Sage"
 				  },
+				  "weaponTraits":{
+					  "charge-blade":"Charge Blade",
+					  "cb-sword":"Charge Blade Sword"
+				  },
 				  "weaponGroups":{
 					  "aegis":"Aegis"
 				  },
 				  "baseWeapons":{
-					  "aegis":"Aegis"
+					  "aegis":"Aegis",
+					  "charge-blade":"Charge Blade",
+					  "charge-axe":"Charge Axe",
+					  "charge-shield":"Charge Shield"
 				  }
 
 			}
