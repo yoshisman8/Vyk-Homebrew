@@ -22,6 +22,11 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 
 # Changelog
 
+## Version 1.9.1
+
+* Fixed links on Jeweled Arcanist Enhanced Gem Stances. 
+* Chagned Ruby Stance to new balance
+
 ## Version 1.9.0
 
 * Added Buster to the Pack
