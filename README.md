@@ -22,6 +22,10 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 
 # Changelog
 
+## Version 1.9.2
+
+* Migrated pack to Foundry v9 and Pf2e v3.1.3
+
 ## Version 1.9.1
 
 * Fixed links on Jeweled Arcanist Enhanced Gem Stances. 
