@@ -89,6 +89,22 @@
 			"system":"pf2e",
 			"entity": "Item",
 			"module": "vyk-homebrew"
+		},
+		{
+			"name": "gunbreaker",
+			"label": "Gunbreaker",
+			"path": "packs/gunbreaker.db",
+			"system":"pf2e",
+			"entity": "Item",
+			"module": "vyk-homebrew"
+		},
+		{
+		  "label": "Gunbreaker Macros",
+		  "entity": "Macro",
+		  "name": "gunbreaker-macros",
+		  "path": "packs/gunbreaker-macros.db",
+		  "system": "pf2e",
+		  "module": "vyk-homebrew"
 		}
 	],
 	"minimumSystemVersion": "3.1.3",
@@ -113,7 +129,11 @@
 						"label":"Burst",
 						"description":"<p>Actions with the Burst trait require the expenditure of one or more charge blade <b>Charge</b>. This action expends </p>"
 					},
-					"buster":"Buster"
+					"buster":"Buster",
+					"trigger":{
+						"label":"Trigger",
+						"description":"<p> Actions with the Trigger Trait require the consumption of a <b>Charged Cartridge</b> contained within a Gunblade you are currently wielding. Regardless of the outcome of the action, the Cartridge is spent.</p>"
+					}
 				  },
 				  "spellTraits": {
 					"egi": {
@@ -125,7 +145,8 @@
 				  },
 				  "weaponTraits":{
 					  "charge-blade":"Charge Blade",
-					  "cb-sword":"Charge Blade Sword"
+					  "cb-sword":"Charge Blade Sword",
+					  "gunblade":"Gunblade"
 				  },
 				  "weaponGroups":{
 					  "aegis":"Aegis"
@@ -134,7 +155,8 @@
 					  "aegis":"Aegis",
 					  "charge-blade":"Charge Blade",
 					  "charge-axe":"Charge Axe",
-					  "charge-shield":"Charge Shield"
+					  "charge-shield":"Charge Shield",
+					  "gunblade":"Gunblade"
 				  }
 
 			}
