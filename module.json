@@ -3,7 +3,7 @@
 	"title": "Vyklade's Book of Homebrew",
 	"description": "<p>A collection of Homebrew content created by u/yoshisman8!<p/><p>Find the complete collection over at:</p><p>https://scribe.pf2.tools/v/Lpmolb4Q-vyklade-s-book-of-homebrew</p>",
 	"author": "Vyklade",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"minimumCoreVersion": "9",
 	"compatibleCoreVersion": "9",
 	"system":[
@@ -117,13 +117,21 @@
 						"description":"<p>Blade Arts are special abilities unique to Mystic Knights. A Blade Art can only be performed once before needing to be <b>Recharge</b>.</p><p>You can Recharge all of your Blade Arts by spending 10 minutes doing the <b>Refocus</b> Activity.</p>"
 					},
 					"reaper": "Reaper",
-					"soul": {
-						"label":"Soul",
-						"description":"<p>An action, feat or spell with the Soul trait requires at least one <b>Soul Shard</b> to be casted or performed.</p>"
+					"soul1": {
+						"label":"Soul 1",
+						"description":"<p>Feats or Soul Arts with this trait require Soul Shards equal to the value listed to activate.</p>"
 					},
-					"enshroud": {
-						"label":"Enshroud",
-						"description":"<p>An action, feat or spell with the Enshroud trait requires you to be under the effect of Reaper's <b>Enshroud</b> ability.</p>"
+					"soul2": {
+						"label":"Soul 2",
+						"description":"<p>Feats or Soul Arts with this trait require Soul Shards equal to the value listed to activate.</p>"
+					},
+					"harvest": {
+						"label":"Harvest",
+						"description":"<p>Class Features, Feats, or Spells with this Trait can either generate Soul Shards, Hit Points, or Temporary HP. They must be a being with soulforce present within them, living or undead.</p><p>While you can use abilities with the Harvest Traits on beings without soulforce, such as Constructs, you cannot generate Soul Shards, Hit Points, or Temporary HP in doing so.</p>"
+					},
+					"windup":{
+						"label":"Wind Up",
+						"description":"<p>Feats or Soul Arts with this trait modify and enhance the next Strike you make on your Turn, even if that Strike is part of another Action.</p>"
 					},
 					"burst":{
 						"label":"Burst",
@@ -141,7 +149,11 @@
 						"description":"Spells with the Egi trait can only be casted by a Jeweled Egi. The spell still utilizes the master's Spell Attack and Spell DC and uses one of their Focus Points."
 					},
 					"reaper": "Reaper",
-					"sage":"Sage"
+					"sage":"Sage",
+					"harvest": {
+						"label":"Harvest",
+						"description":"<p>Class Features, Feats, or Spells with this Trait can either generate Soul Shards, Hit Points, or Temporary HP. They must be a being with soulforce present within them, living or undead.</p><p>While you can use abilities with the Harvest Traits on beings without soulforce, such as Constructs, you cannot generate Soul Shards, Hit Points, or Temporary HP in doing so.</p>"
+					}
 				  },
 				  "weaponTraits":{
 					  "charge-blade":"Charge Blade",
