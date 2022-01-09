@@ -22,6 +22,10 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 
 # Changelog
 
+## Version 3.0.2
+
+* Fixed some minor Rule Element issues with Reaper
+
 ## Version 3.0.1
 
 * Minor tweaks to Reaper based on feedback from audience
