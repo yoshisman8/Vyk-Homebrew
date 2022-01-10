@@ -22,6 +22,10 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 
 # Changelog
 
+## Version 3.1.0
+
+* Fixed duplicate and broken links in multiple of the content packs. This was caused by the v9 foundry migration procees and i just did not notice it initially.
+
 ## Version 3.0.3
 
 * Even more fixes to Reaper abilities based on discussions with HelpfulDrow
