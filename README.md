@@ -22,6 +22,10 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 
 # Changelog
 
+## Version 3.1.2
+
+* Tweaked and altered multiple reaper features, feats and spells with new balance changes.
+
 ## Version 3.1.1
 
 * Tweaked Brutal Shell feat for Gunbreaker
