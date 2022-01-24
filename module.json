@@ -3,7 +3,7 @@
 	"title": "PF2e - Vyklade's Book of Homebrew",
 	"description": "<p>A collection of Homebrew content created by u/yoshisman8!<p/><p>Find the complete collection over at:</p><p>https://scribe.pf2.tools/v/Lpmolb4Q-vyklade-s-book-of-homebrew</p>",
 	"author": "Vyklade",
-	"version": "3.1.3",
+	"version": "3.2.0",
 	"minimumCoreVersion": "9",
 	"compatibleCoreVersion": "9",
 	"system":[
@@ -105,6 +105,14 @@
 		  "path": "packs/gunbreaker-macros.db",
 		  "system": "pf2e",
 		  "module": "vyk-homebrew"
+		},
+		{
+			"name": "dragoon",
+			"label": "Dragoon",
+			"path": "packs/dragoon.db",
+			"system":"pf2e",
+			"entity": "Item",
+			"module": "vyk-homebrew"
 		}
 	],
 	"minimumSystemVersion": "3.1.3",
@@ -141,6 +149,10 @@
 					"trigger":{
 						"label":"Trigger",
 						"description":"<p> Actions with the Trigger Trait require the consumption of a <b>Charged Cartridge</b> contained within a Gunblade you are currently wielding. Regardless of the outcome of the action, the Cartridge is spent.</p>"
+					},
+					"dive":{
+						"label":"Dive",
+						"description":"<p>Certain actions from the Dragoon archetype contain the Dive trait. These actions can be executed as part of Dragoon Jump instead of a Strike.</p>"
 					}
 				  },
 				  "spellTraits": {
