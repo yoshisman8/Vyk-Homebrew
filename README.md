@@ -23,6 +23,10 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 
 # Changelog
 
+## Version 3.2.1
+
+* Updated Soul Reaper feat to reflect new balance changes.
+
 ## Version 3.2.0
 
 * Added Dragoon to pack
