@@ -23,6 +23,10 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 
 # Changelog
 
+## Version 3.2.2
+
+* Updated Reaper class to grant its own version of Weapon Expertise as the built in one no longer works.
+
 ## Version 3.2.1
 
 * Updated Soul Reaper feat to reflect new balance changes.
