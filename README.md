@@ -22,6 +22,12 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 * Painterly Icons by [J. W. Bjerk](https://opengameart.org/content/painterly-spell-icons-part-1) [(Part 2)](http://opengameart.org/content/painterly-spell-icons-part-2) [(Part 3)](http://opengameart.org/content/painterly-spell-icons-part-3) [(Part 4)](http://opengameart.org/content/painterly-spell-icons-part-3) Under [CC 3.0](http://creativecommons.org/licenses/by/3.0/)
 
 # Changelog
+## Version 3.3.1
+
+* Added new Reaper feat *Ultimate Magerie*
+* Changed feat *Fiendish Negation* to reflect new balance changes
+* Added new Dragoon feat *Dive Conversion*
+
 ## Version 3.3.0
 
 * Changed Reaper's Divine Smite Soul Art from Greater art to Lesser art.
