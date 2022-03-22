@@ -23,7 +23,7 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 
 # Changelog
 
-## Version 3.3.3
+## Version 3.3.4
 
 * Reaper's Harvesting Stance now grants the Reach trait to Trip weapons.
 
