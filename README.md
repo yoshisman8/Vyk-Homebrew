@@ -13,6 +13,7 @@ This pack currently contains the following content:
 * [Buster (Class)](https://scribe.pf2.tools/v/Cm82Svvj)
 * [Gunbreaker (Archetype)](https://scribe.pf2.tools/v/rz4YO5dl)
 * [Dragoon (Archetype)](https://scribe.pf2.tools/v/JxSo1xSR)
+* [Bladesong (Archetype)](https://scribe.pf2.tools/v/ppCwjmZP)
 
 
 Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/module.json](https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/module.json)
@@ -22,6 +23,10 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 * Painterly Icons by [J. W. Bjerk](https://opengameart.org/content/painterly-spell-icons-part-1) [(Part 2)](http://opengameart.org/content/painterly-spell-icons-part-2) [(Part 3)](http://opengameart.org/content/painterly-spell-icons-part-3) [(Part 4)](http://opengameart.org/content/painterly-spell-icons-part-3) Under [CC 3.0](http://creativecommons.org/licenses/by/3.0/)
 
 # Changelog
+
+## Version 3.4.0
+
+* Added brand new archetype: Bladesong! Featuring automatic Mirrage obtaining when combat begins!
 
 ## Version 3.3.5
 
