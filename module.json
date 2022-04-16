@@ -3,7 +3,7 @@
 	"title": "PF2e - Vyklade's Book of Homebrew",
 	"description": "<p>A collection of Homebrew content created by u/yoshisman8!<p/><p>Find the complete collection over at:</p><p>https://scribe.pf2.tools/v/Lpmolb4Q-vyklade-s-book-of-homebrew</p>",
 	"author": "Vyklade",
-	"version": "3.4.0",
+	"version": "3.5.0",
 	"minimumCoreVersion": "9",
 	"compatibleCoreVersion": "9",
 	"system":[
@@ -150,6 +150,24 @@
             "type": "Macro",
             "name": "bladesong-macros",
             "path": "packs/bladesong-macros.db",
+            "system": "pf2e",
+            "module": "vyk-homebrew",
+            "entity": "Macro"
+        },
+        {
+            "label": "Chronomancer",
+            "type": "Item",
+            "name": "chronomancer",
+            "path": "packs/chronomancer.db",
+            "system": "pf2e",
+			"module": "vyk-homebrew",
+            "entity": "Item"
+        },
+        {
+            "label": "Chronomancer Macros",
+            "type": "Macro",
+            "name": "chronomancer-macros",
+            "path": "packs/chronomancer-macros.db",
             "system": "pf2e",
             "module": "vyk-homebrew",
             "entity": "Macro"
