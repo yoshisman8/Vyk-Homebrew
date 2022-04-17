@@ -25,6 +25,10 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 
 # Changelog
 
+## Version 3.5.1
+
+* Added new Bladesong feat: Mirror's Edge
+
 ## Version 3.5.0
 
 * Added a brand new archetype: Chronomancer! Featuring Mote management macros!
