@@ -25,9 +25,12 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 
 # Changelog
 
-## Version 3.5.1
 
-* Added new Bladesong feat: Mirror's Edge
+
+## Version 3.5.2
+
+* Added new Bladesong feat: Mirror's Edge.
+* Modified Chronomancer lessons to also grant a spell known.
 
 ## Version 3.5.0
 
