@@ -174,6 +174,8 @@ async function handleVirtueCreateItem(document,updateData){
 
     let options = token.actor.getRollOptions(['all']);
     
+    let cha = token.actor.data.data.abilities.cha.mod;
+    
     let enkindle = options.includes('brand:enkindle');
     
     let pos = canvas.grid.getCenter(token.data.x,token.data.y);
@@ -212,12 +214,14 @@ async function handleVirtueCreateItem(document,updateData){
         let aegisBuff = (await fromUuid(AEGIS)).toObject();
         aegisBuff.flags.core ??= {};
         aegisBuff.flags.core.sourceId = AEGIS;
+        aegisBuff.data.level.value = cha;
         buffs.push(aegisBuff);
         
         if(enkindle) {
             let aegisBuff2 = (await fromUuid(AEGIS2)).toObject();
             aegisBuff2.flags.core ??= {};
             aegisBuff2.flags.core.sourceId = AEGIS2;
+            aegisBuff2.data.level.value = cha;
             buffs.push(aegisBuff2);
         }
     }
@@ -225,12 +229,14 @@ async function handleVirtueCreateItem(document,updateData){
         let mercyBuff = (await fromUuid(MERCY)).toObject();
         mercyBuff.flags.core ??= {};
         mercyBuff.flags.core.sourceId = MERCY;
+        mercyBuff.data.level.value = cha;
         buffs.push(mercyBuff);
         
         if(enkindle) {
             let mercyBuff2 = (await fromUuid(MERCY2)).toObject();
             mercyBuff2.flags.core ??= {};
             mercyBuff2.flags.core.sourceId = MERCY2;
+            mercyBuff2.data.level.value = cha;
             buffs.push(mercyBuff2);
         }
     }

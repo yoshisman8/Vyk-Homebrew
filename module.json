@@ -3,7 +3,7 @@
 	"title": "PF2e - Vyklade's Book of Homebrew",
 	"description": "<p>A collection of Homebrew content created by u/yoshisman8!<p/><p>Find the complete collection over at:</p><p>https://scribe.pf2.tools/v/Lpmolb4Q-vyklade-s-book-of-homebrew</p>",
 	"author": "Vyklade",
-	"version": "4.1.0",
+	"version": "4.2.0",
 	"minimumCoreVersion": "9",
 	"compatibleCoreVersion": "9",
 	"system":[
@@ -188,7 +188,7 @@
                     "virtue":"Virtue",
                     "brand":{
                         "label":"Brand",
-                        "description":"<p>Brands are a special powers which channel the fire within your soul. When you activate a Brand, it remains active until you use another Brand, fall unconscious or perform your Daily Preparations.</p><p>All brands generate an Aura around you, this aura has the Aura, Divine, Emotion, Magical, and Visual traits</p>"
+                        "description":"<p>Brands are a special powers which channel the fire within your soul. You must be engaged in combat or otherwise be in active danger to activate a brand. When you activate a Brand, it remains active until combat ends, you use another Brand, fall unconscious or perform your Daily Preparations.</p><p>All brands generate an Aura around you, this aura has the Aura, Divine, Emotion, Magical, and Visual traits</p>"
                     },
 					"blade-art": {
 						"label":"Blade Art",
