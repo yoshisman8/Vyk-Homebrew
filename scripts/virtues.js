@@ -1,14 +1,11 @@
 Hooks.once('socketlib.ready', () =>{
     let socket;
     socket = socketlib.registerModule("vyk-homebrew");
-    socket.register("hadleTempVirtues", hadleTempVirtues);
     socket.register("handleVirtueTokenUpdate", handleVirtueTokenUpdate);
     socket.register("handleVirtueCreateItem", handleVirtueCreateItem);
     socket.register("handleVirtueDeleteItem", handleVirtueDeleteItem);
     
-    Hooks.on('updateCombat', async (Enc, Round, diff, id) => {
-        await socket.executeAsGM("hadleTempVirtues",Enc,Round,diff,id);
-    });
+
     Hooks.on('updateToken', async (document, updateData) => {
         await socket.executeAsGM("handleVirtueTokenUpdate",document,updateData);
     });
@@ -21,43 +18,6 @@ Hooks.once('socketlib.ready', () =>{
         await socket.executeAsGM("handleVirtueDeleteItem",document,updateData);
     });
 });
-
-async function hadleTempVirtues(Enc, Round,diff,id){ 
-    if(Enc.started === false) return;
-    
-    if(Enc.current.round > 1) return;
-    if(Enc.current.turn > 0) return;
-    
-    const UUID = "Compendium.vyk-homebrew.virtuous-guardian.U34nOhwMHkl8t9R7";
-    
-    let source = (await fromUuid(UUID)).toObject();
-    source.flags.core ?? {};
-    source.flags.core.sourceId = UUID;
-    source.flags.vyklade = {};
-    source.flags.vyklade.obtained = true;
-    
-    let comb = Array.from(Enc.combatants.values());
-    
-    comb.forEach(async (C) => {
-        let a = C.actor;
-        
-        if(!a) return;
-        
-        if(a.getRollOptions(['all']).includes("feature:virtues")){
-            const existing = a.itemTypes.effect.find((effect) => effect.getFlag('core', 'sourceId') === UUID);
-            if(existing){
-                if(existing.data.flags.hasOwnProperty('vyklade')){
-                    if(existing.data.flags.vyklade.obtained) return;
-                }
-                await existing.delete();
-            }
-            source.data.level.value = 3;
-            source.data.img = `modules/vyk-homebrew/assets/virtuousGuardian/temp3.png`;
-            await a.createEmbeddedDocuments('Item', [source]);
-        }
-        
-    })
-}
 
 async function handleVirtueTokenUpdate(document,updateData){
     // If this update contains no movement, ignore it

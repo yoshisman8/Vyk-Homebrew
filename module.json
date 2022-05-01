@@ -3,7 +3,7 @@
 	"title": "PF2e - Vyklade's Book of Homebrew",
 	"description": "<p>A collection of Homebrew content created by u/yoshisman8!<p/><p>Find the complete collection over at:</p><p>https://scribe.pf2.tools/v/Lpmolb4Q-vyklade-s-book-of-homebrew</p>",
 	"author": "Vyklade",
-	"version": "4.0.0",
+	"version": "4.1.0",
 	"minimumCoreVersion": "9",
 	"compatibleCoreVersion": "9",
 	"system":[
@@ -139,15 +139,6 @@
             "entity": "Item"
         },
         {
-            "label": "Virtuous Guardian Macros",
-            "type": "Macro",
-            "name": "virtuous-guardian-macros",
-            "path": "packs/virtuous-guardian-macros.db",
-            "system": "pf2e",
-            "module": "vyk-homebrew",
-            "entity": "Macro"
-        },
-        {
             "label": "Bladesong",
             "type": "Item",
             "name": "bladesong",
@@ -194,17 +185,10 @@
                     "shatter3":"Shatter 3",
                     "shatter4":"Shatter 4",
                     "shatter5":"Shatter 5",
-                    "virtue":{
-                        "label":"Virtue",
-                        "description":"<p>Actions with the Virtue trait cost a point of Virtue to be spent to be performed. This point is spent before the effects of this action.</p>"
-                    },
+                    "virtue":"Virtue",
                     "brand":{
                         "label":"Brand",
-                        "description":"<p>Brands Virtue Powers are special stances which can be entered at any time. You automatically exist any Brand stance when you fall unconscious or enter another Brand stance.</p><p>While in a Brand stance, you can spent a point of Virtue to enhance that brand's effects.</p>"
-                    },
-                    "physical":{
-                        "label":"Physical",
-                        "description":"<p>Physical Virtue Powers are special powers which enhance the guardian's physique, allowing them to perform supernatural feats.</p>"
+                        "description":"<p>Brands are a special powers which channel the fire within your soul. When you activate a Brand, it remains active until you use another Brand, fall unconscious or perform your Daily Preparations.</p><p>All brands generate an Aura around you, this aura has the Aura, Divine, Emotion, Magical, and Visual traits</p>"
                     },
 					"blade-art": {
 						"label":"Blade Art",
@@ -242,6 +226,7 @@
 					}
 				  },
 				  "spellTraits": {
+                    "virtue":"Virtue",
                     "bladesong":"Bladesong",
                     "shatter1":"Shatter 1",
                     "shatter2":"Shatter 2",
