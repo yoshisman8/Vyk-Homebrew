@@ -3,7 +3,7 @@
 	"title": "PF2e - Vyklade's Book of Homebrew",
 	"description": "<p>A collection of Homebrew content created by u/yoshisman8!<p/><p>Find the complete collection over at:</p><p>https://scribe.pf2.tools/v/Lpmolb4Q-vyklade-s-book-of-homebrew</p>",
 	"author": "Vyklade",
-	"version": "3.5.3",
+	"version": "4.0.0",
 	"minimumCoreVersion": "9",
 	"compatibleCoreVersion": "9",
 	"system":[
@@ -13,6 +13,17 @@
         "./scripts/bladesong.js",
         "./scripts/virtues.js"
     ],
+    "socket":true,
+	"dependencies": [
+		{
+			"name": "socketlib",
+			"manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/master/module.json"
+		},
+        {
+            "name": "warpgate",
+            "manifest": "https://raw.githubusercontent.com/trioderegion/warpgate/master/module.json"
+        }
+	],
 	"packs": [
 		{
 			"name": "mystic-knight",

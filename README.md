@@ -10,6 +10,7 @@ This pack currently contains the following content:
 * [Jeweled Arcanist (Class Archetype)](https://scribe.pf2.tools/v/4lVFFbQs)
 * [Artifact Sage (Class Archetype)](https://scribe.pf2.tools/v/8Vtwvw6d)
 * [Chronomancer (Class Archetype)](https://scribe.pf2.tools/v/PPTxMd0J-chronomancer)
+* [Virtuous Guardian (Class archetype)(https://scribe.pf2.tools/v/5c1PWWZw-virtuous-guardian)
 * [Reaper (Class)](https://scribe.pf2.tools/v/5mOhtZcQ)
 * [Buster (Class)](https://scribe.pf2.tools/v/Cm82Svvj)
 * [Gunbreaker (Archetype)](https://scribe.pf2.tools/v/rz4YO5dl)
@@ -25,7 +26,9 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 
 # Changelog
 
-
+## Version 4.0.0
+* Added new class archetype: Virtuous Guardian
+* Module now depends on the Warpgate and SocketLib modules for automation support.
 
 ## Version 3.5.2
 
