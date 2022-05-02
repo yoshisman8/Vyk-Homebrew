@@ -1,25 +1,28 @@
+
 Hooks.once('socketlib.ready', () =>{
     let socket;
+    
     socket = socketlib.registerModule("vyk-homebrew");
-    socket.register("handleVirtueTokenUpdate", handleVirtueTokenUpdate);
-    socket.register("handleVirtueCreateItem", handleVirtueCreateItem);
-    socket.register("handleVirtueDeleteItem", handleVirtueDeleteItem);
+    socket.register("addItemGuardian", addItem);
+    socket.register("deleteItemGuardian", removeItem);
     
+    Hooks.on('updateToken', async (document,updateData) => { await handleVirtueTokenUpdate(document,updateData,socket) });
+    
+    Hooks.on('createItem', async (document,updateData) => { await handleVirtueCreateItem(document,updateData,socket) });
 
-    Hooks.on('updateToken', async (document, updateData) => {
-        await socket.executeAsGM("handleVirtueTokenUpdate",document,updateData);
-    });
-    
-    Hooks.on('createItem', async (document,updateData) => {
-        await socket.executeAsGM("handleVirtueCreateItem",document,updateData);
-    });
-    
-    Hooks.on('deleteItem', async (document,updateData) => {
-        await socket.executeAsGM("handleVirtueDeleteItem",document,updateData);
-    });
+    Hooks.on('deleteItem', async (document,updateData) => { await handleVirtueDeleteItem(document,updateData,socket)});
 });
 
-async function handleVirtueTokenUpdate(document,updateData){
+
+    
+async function addItem(actor,type,item){
+    await actor.createEmbeddedDocuments(type,[item]);
+}
+async function removeItem(item){
+    await item.delete()
+}
+
+async function handleVirtueTokenUpdate(document,updateData, socket){
     // If this update contains no movement, ignore it
     if(!updateData.x && !updateData.y) return;
     
@@ -122,7 +125,8 @@ async function handleVirtueTokenUpdate(document,updateData){
                 if(B.flags.core.sourceId === MERCY2) return; // Do not remove the health regen. This one lingers
                 let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
                 if(existing){
-                    await existing.delete();
+                    if(O.actor.isOwner) await existing.delete();
+                    else await socket.executeAsGM('deleteItemGuardian',existing);
                 }
             });
             
@@ -139,7 +143,8 @@ async function handleVirtueTokenUpdate(document,updateData){
             buffs.forEach(async (B) =>{
                 let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
                 if(!existing){
-                    await O.actor.createEmbeddedDocuments('Item', [B]);
+                    if(O.actor.isOwner) await O.actor.createEmbeddedDocuments('Item', [B]);
+                    else await socket.executeAsGM('addItemGuardian',O.actor,Item,B);
                 }
             });
             
@@ -148,7 +153,7 @@ async function handleVirtueTokenUpdate(document,updateData){
     });
 }
 
-async function handleVirtueCreateItem(document,updateData){
+async function handleVirtueCreateItem(document,updateData, socket){
     if(document.type != "effect") return;
     
     // Declare all Stance UUIDs
@@ -250,7 +255,8 @@ async function handleVirtueCreateItem(document,updateData){
             if(B.flags.core.sourceId === MERCY2) return; // Do not remove the health regen. This one lingers
             let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
             if(existing){
-                await existing.delete();
+                if(O.actor.isOwner) await existing.delete();
+                else await socket.executeAsGM('deleteItemGuardian',existing);
             }
         });
         
@@ -265,7 +271,9 @@ async function handleVirtueCreateItem(document,updateData){
         buffs.forEach(async (B) =>{
             let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
             if(!existing){
-                await O.actor.createEmbeddedDocuments('Item', [B]);
+                if(O.actor.isOwner) await O.actor.createEmbeddedDocuments('Item', [B]);
+                else await socket.executeAsGM('addItemGuardian', O.actor, 'Item',B);
+                
             }
         });
         
@@ -273,7 +281,7 @@ async function handleVirtueCreateItem(document,updateData){
     })
 }
 
-async function handleVirtueDeleteItem(document,updateData){
+async function handleVirtueDeleteItem(document,updateData, socket){
     if(document.type != "effect") return;
     
     // Declare all Stance UUIDs
@@ -382,13 +390,15 @@ async function handleVirtueDeleteItem(document,updateData){
             if(B.flags.core.sourceId === MERCY2) return; // Do not remove the health regen. This one lingers
             let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
             if(existing){
-                await existing.delete();
+                if(O.actor.isOwner) await existing.delete();
+                else await socket.executeAsGM('deleteItemGuardian',existing);
             }
         });
         cleanup.forEach(async (B)=>{
             let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
             if(existing){
-                await existing.delete();
+                if(O.actor.isOwner) await existing.delete();
+                else await socket.executeAsGM('deleteItemGuardian',existing);
             }
         });
         
@@ -403,13 +413,15 @@ async function handleVirtueDeleteItem(document,updateData){
         buffs.forEach(async (B) =>{
             let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
             if(!existing){
-                await O.actor.createEmbeddedDocuments('Item', [B]);
+                if(O.actor.isOwner) await O.actor.createEmbeddedDocuments('Item', [B]);
+                else socket.executeAsGM('addItemGuardian',O.actor,'Item',B);
             }
         });
         cleanup.forEach(async (B)=>{
             let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
             if(existing){
-                await existing.delete();
+                if(O.actor.isOwner) await existing.delete();
+                else await socket.executeAsGM('deleteItemGuardian',existing);
             }
         });
         inBuffer.push(O);
