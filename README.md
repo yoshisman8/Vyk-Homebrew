@@ -25,6 +25,11 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 * Painterly Icons by [J. W. Bjerk](https://opengameart.org/content/painterly-spell-icons-part-1) [(Part 2)](http://opengameart.org/content/painterly-spell-icons-part-2) [(Part 3)](http://opengameart.org/content/painterly-spell-icons-part-3) [(Part 4)](http://opengameart.org/content/painterly-spell-icons-part-3) Under [CC 3.0](http://creativecommons.org/licenses/by/3.0/)
 
 # Changelog
+
+## Version 4.2.1
+
+* Minor adjustment to Indominable Courage
+
 ## Version 4.2.0
 * Virtuous Guardian balance patch 1
 
