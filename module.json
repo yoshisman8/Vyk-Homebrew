@@ -3,7 +3,7 @@
 	"title": "PF2e - Vyklade's Book of Homebrew",
 	"description": "<p>A collection of Homebrew content created by u/yoshisman8!<p/><p>Find the complete collection over at:</p><p>https://scribe.pf2.tools/v/Lpmolb4Q-vyklade-s-book-of-homebrew</p>",
 	"author": "Vyklade",
-	"version": "4.2.2",
+	"version": "5.0.0",
 	"minimumCoreVersion": "9",
 	"compatibleCoreVersion": "9",
 	"system":[
@@ -173,6 +173,42 @@
             "system": "pf2e",
             "module": "vyk-homebrew",
             "entity": "Macro"
+        },
+        {
+            "label": "Silufae Ancestry",
+            "type": "Item",
+            "name": "silufae-ancestry",
+            "path": "packs/silufae-ancestry.db",
+            "system": "pf2e",
+			"module": "vyk-homebrew",
+            "entity": "Item"
+        },
+        {
+            "label": "Bladecaster",
+            "type": "Item",
+            "name": "bladecaster",
+            "path": "packs/bladecaster.db",
+            "system": "pf2e",
+			"module": "vyk-homebrew",
+            "entity": "Item"
+        },
+        {
+            "label": "Bladecaster Macros",
+            "type": "Macro",
+            "name": "bladecaster-macros",
+            "path": "packs/bladecaster-macros.db",
+            "system": "pf2e",
+            "module": "vyk-homebrew",
+            "entity": "Macro"
+        },
+        {
+            "label": "Archmage",
+            "type": "Item",
+            "name": "archmage",
+            "path": "packs/archmage.db",
+            "system": "pf2e",
+            "module": "vyk-homebrew",
+            "entity": "Item"
         }
 	],
 	"minimumSystemVersion": "3.1.3",
@@ -180,6 +216,7 @@
 		"vyk-homebrew": {
 			"pf2e-homebrew": {
 				"featTraits": {
+                    "silufae": "Silufae",
                     "shatter1":"Shatter 1",
                     "shatter2":"Shatter 2",
                     "shatter3":"Shatter 3",
@@ -258,7 +295,10 @@
 					  "charge-axe":"Charge Axe",
 					  "charge-shield":"Charge Shield",
 					  "gunblade":"Gunblade"
-				  }
+				  },
+                  "creatureTraits":{
+                      "silufae":"Silufae"
+                  }
 
 			}
 		}
