@@ -14,6 +14,7 @@ This pack currently contains the following content:
 * [Reaper](https://scribe.pf2.tools/v/5mOhtZcQ)
 
 ## Class Archetypes
+* [Archmage (Wizard)](https://scribe.pf2.tools/v/sWd8y78x)
 * [Artifact Sage (Wizard)](https://scribe.pf2.tools/v/8Vtwvw6d)
 * [Bladecaster (Swashbuckler)](https://scribe.pf2.tools/v/p2Hb2Xf1)
 * [Chronomancer (Witch)](https://scribe.pf2.tools/v/PPTxMd0J-chronomancer)
