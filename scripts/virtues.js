@@ -83,7 +83,7 @@ async function handleVirtueTokenUpdate(document,updateData, socket){
                 buffs.push(mightBuff2);
             }
         }
-        else if(options.includes('brand:aegis')){
+        if(options.includes('brand:aegis')){
             let aegisBuff = (await fromUuid(AEGIS)).toObject();
             aegisBuff.flags.core ??= {};
             aegisBuff.flags.core.sourceId = AEGIS;
@@ -98,7 +98,7 @@ async function handleVirtueTokenUpdate(document,updateData, socket){
                 buffs.push(aegisBuff2);
             }
         }
-        else if(options.includes('brand:mercy')){
+        if(options.includes('brand:mercy')){
             let mercyBuff = (await fromUuid(MERCY)).toObject();
             mercyBuff.flags.core ??= {};
             mercyBuff.flags.core.sourceId = MERCY;
@@ -215,7 +215,7 @@ async function handleVirtueCreateItem(document,updateData, socket){
             buffs.push(mightBuff2);
         }
     }
-    else if(options.includes('brand:aegis')){
+    if(options.includes('brand:aegis')){
         let aegisBuff = (await fromUuid(AEGIS)).toObject();
         aegisBuff.flags.core ??= {};
         aegisBuff.flags.core.sourceId = AEGIS;
@@ -230,7 +230,7 @@ async function handleVirtueCreateItem(document,updateData, socket){
             buffs.push(aegisBuff2);
         }
     }
-    else if(options.includes('brand:mercy')){
+    if(options.includes('brand:mercy')){
         let mercyBuff = (await fromUuid(MERCY)).toObject();
         mercyBuff.flags.core ??= {};
         mercyBuff.flags.core.sourceId = MERCY;
