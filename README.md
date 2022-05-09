@@ -36,6 +36,11 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 
 # Changelog
 
+## Version 5.1.0
+
+* Added new Virtuous Guardian path
+* Rebranded Virtious Guardian paths with new names that do not directly refernce their source material.
+
 ## Version 5.0.0
 
 * Added Silufae Ancestry 

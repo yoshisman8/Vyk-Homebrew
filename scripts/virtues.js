@@ -3,24 +3,13 @@ Hooks.once('socketlib.ready', () =>{
     let socket;
     
     socket = socketlib.registerModule("vyk-homebrew");
-    socket.register("addItemGuardian", addItem);
-    socket.register("deleteItemGuardian", removeItem);
-    
+
     Hooks.on('updateToken', async (document,updateData) => { await handleVirtueTokenUpdate(document,updateData,socket) });
     
     Hooks.on('createItem', async (document,updateData) => { await handleVirtueCreateItem(document,updateData,socket) });
 
     Hooks.on('deleteItem', async (document,updateData) => { await handleVirtueDeleteItem(document,updateData,socket)});
 });
-
-
-    
-async function addItem(actor,type,item){
-    await actor.createEmbeddedDocuments(type,[item]);
-}
-async function removeItem(item){
-    await item.delete()
-}
 
 async function handleVirtueTokenUpdate(document,updateData, socket){
     // If this update contains no movement, ignore it
@@ -116,37 +105,107 @@ async function handleVirtueTokenUpdate(document,updateData, socket){
         
         let outBuffer = [];
         
-        console.log(buffs);
-        
         alliesOutFiltered.forEach(async (O)=>{
             if (outBuffer.includes(O)) return;
             
-            buffs.forEach(async (B) =>{
-                if(B.flags.core.sourceId === MERCY2) return; // Do not remove the health regen. This one lingers
-                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
-                if(existing){
-                    if(O.actor.isOwner) await existing.delete();
-                    else await socket.executeAsGM('deleteItemGuardian',existing);
-                }
-            });
+            let onlineOwners = game.users.filter(x=> !x.isGM && x.active && O.actor.data.permission.hasOwnProperty(x.id) && O.actor.data.permission[x.id] === 3);
+
+            
+            if(!game.user.isGM && O.actor.isOwner){
+                buffs.forEach(async (B) =>{
+                    let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
+                    if(existing){
+                        await existing.delete();
+                    }
+                });
+                cleanup.forEach(async (B)=>{
+                    let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
+                    if(existing){
+                        await existing.delete();
+                    }
+                });
+            }else if (game.user.isGM && !O.actor.hasPlayerOwner) {
+                buffs.forEach(async (B) =>{
+                    let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
+                    if(existing){
+                        await existing.delete();
+                    }
+                });
+                cleanup.forEach(async (B)=>{
+                    let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
+                    if(existing){
+                        await existing.delete();
+                    }
+                });
+            } else if(game.user.isGM && O.actor.hasPlayerOwner && onlineOwners.length === 0){
+                buffs.forEach(async (B) =>{
+                    let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
+                    if(existing){
+                        await existing.delete();
+                    }
+                });
+                cleanup.forEach(async (B)=>{
+                    let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
+                    if(existing){
+                        await existing.delete();
+                    }
+                });
+            }
+            
             
             outBuffer.push(O);
         })
         
         let inBuffer = [];
         
+        
+        
         alliesInRadius.forEach(async (O)=>{
             if (inBuffer.includes(O)) return;
             
-            console.log(O);
+            let onlineOwners = game.users.filter(x=>!x.isGM && x.active && O.actor.data.permission.hasOwnProperty(x.id) && O.actor.data.permission[x.id] === 3);
             
-            buffs.forEach(async (B) =>{
-                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
-                if(!existing){
-                    if(O.actor.isOwner) await O.actor.createEmbeddedDocuments('Item', [B]);
-                    else await socket.executeAsGM('addItemGuardian',O.actor,Item,B);
-                }
-            });
+            if(!game.user.isGM && O.actor.isOwner){
+                buffs.forEach(async (B) =>{
+                    let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
+                    if(!existing){
+                        await O.actor.createEmbeddedDocuments('Item', [B]); 
+                    }
+                });
+                cleanup.forEach(async (B)=>{
+                    let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
+                    if(existing){
+                        await existing.delete();
+                    }
+                });
+            }
+            else if(game.user.isGM && !O.actor.hasPlayerOwner){
+                buffs.forEach(async (B) =>{
+                    let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
+                    if(!existing){
+                        await O.actor.createEmbeddedDocuments('Item', [B]); 
+                    }
+                });
+                cleanup.forEach(async (B)=>{
+                    let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
+                    if(existing){
+                        await existing.delete();
+                    }
+                });
+            } else if(game.user.isGM && O.actor.hasPlayerOwner && onlineOwners.length === 0){
+                buffs.forEach(async (B) =>{
+                    let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
+                    if(!existing){
+                        await O.actor.createEmbeddedDocuments('Item', [B]); 
+                    }
+                });
+                cleanup.forEach(async (B)=>{
+                    let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
+                    if(existing){
+                        await existing.delete();
+                    }
+                });
+            }
             
             inBuffer.push(O);
         })
@@ -251,31 +310,104 @@ async function handleVirtueCreateItem(document,updateData, socket){
     alliesOutFiltered.forEach(async (O)=>{
         if (outBuffer.includes(O)) return;
         
-        buffs.forEach(async (B) =>{
-            if(B.flags.core.sourceId === MERCY2) return; // Do not remove the health regen. This one lingers
-            let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
-            if(existing){
-                if(O.actor.isOwner) await existing.delete();
-                else await socket.executeAsGM('deleteItemGuardian',existing);
-            }
-        });
+        let onlineOwners = game.users.filter(x=> !x.isGM && x.active && O.actor.data.permission.hasOwnProperty(x.id) && O.actor.data.permission[x.id] === 3);
+
+        
+        if(!game.user.isGM && O.actor.isOwner){
+            buffs.forEach(async (B) =>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
+                if(existing){
+                    await existing.delete();
+                }
+            });
+            cleanup.forEach(async (B)=>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
+                if(existing){
+                    await existing.delete();
+                }
+            });
+        }else if (game.user.isGM && !O.actor.hasPlayerOwner) {
+            buffs.forEach(async (B) =>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
+                if(existing){
+                    await existing.delete();
+                }
+            });
+            cleanup.forEach(async (B)=>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
+                if(existing){
+                    await existing.delete();
+                }
+            });
+        } else if(game.user.isGM && O.actor.hasPlayerOwner && onlineOwners.length === 0){
+            buffs.forEach(async (B) =>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
+                if(existing){
+                    await existing.delete();
+                }
+            });
+            cleanup.forEach(async (B)=>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
+                if(existing){
+                    await existing.delete();
+                }
+            });
+        }
+        
         
         outBuffer.push(O);
     })
     
     let inBuffer = [];
     
+    
+    
     alliesInRadius.forEach(async (O)=>{
         if (inBuffer.includes(O)) return;
         
-        buffs.forEach(async (B) =>{
-            let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
-            if(!existing){
-                if(O.actor.isOwner) await O.actor.createEmbeddedDocuments('Item', [B]);
-                else await socket.executeAsGM('addItemGuardian', O.actor, 'Item',B);
-                
-            }
-        });
+        let onlineOwners = game.users.filter(x=>!x.isGM && x.active && O.actor.data.permission.hasOwnProperty(x.id) && O.actor.data.permission[x.id] === 3);
+        
+        if(!game.user.isGM && O.actor.isOwner){
+            buffs.forEach(async (B) =>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
+                if(!existing){
+                    await O.actor.createEmbeddedDocuments('Item', [B]); 
+                }
+            });
+            cleanup.forEach(async (B)=>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
+                if(existing){
+                    await existing.delete();
+                }
+            });
+        }
+        else if(game.user.isGM && !O.actor.hasPlayerOwner){
+            buffs.forEach(async (B) =>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
+                if(!existing){
+                    await O.actor.createEmbeddedDocuments('Item', [B]); 
+                }
+            });
+            cleanup.forEach(async (B)=>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
+                if(existing){
+                    await existing.delete();
+                }
+            });
+        } else if(game.user.isGM && O.actor.hasPlayerOwner && onlineOwners.length === 0){
+            buffs.forEach(async (B) =>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
+                if(!existing){
+                    await O.actor.createEmbeddedDocuments('Item', [B]); 
+                }
+            });
+            cleanup.forEach(async (B)=>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
+                if(existing){
+                    await existing.delete();
+                }
+            });
+        }
         
         inBuffer.push(O);
     })
@@ -386,44 +518,105 @@ async function handleVirtueDeleteItem(document,updateData, socket){
     alliesOutFiltered.forEach(async (O)=>{
         if (outBuffer.includes(O)) return;
         
-        buffs.forEach(async (B) =>{
-            if(B.flags.core.sourceId === MERCY2) return; // Do not remove the health regen. This one lingers
-            let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
-            if(existing){
-                if(O.actor.isOwner) await existing.delete();
-                else await socket.executeAsGM('deleteItemGuardian',existing);
-            }
-        });
-        cleanup.forEach(async (B)=>{
-            let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
-            if(existing){
-                if(O.actor.isOwner) await existing.delete();
-                else await socket.executeAsGM('deleteItemGuardian',existing);
-            }
-        });
+        let onlineOwners = game.users.filter(x=> !x.isGM && x.active && O.actor.data.permission.hasOwnProperty(x.id) && O.actor.data.permission[x.id] === 3);
+
+        
+        if(!game.user.isGM && O.actor.isOwner){
+            buffs.forEach(async (B) =>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
+                if(existing){
+                    await existing.delete();
+                }
+            });
+            cleanup.forEach(async (B)=>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
+                if(existing){
+                    await existing.delete();
+                }
+            });
+        }else if (game.user.isGM && !O.actor.hasPlayerOwner) {
+            buffs.forEach(async (B) =>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
+                if(existing){
+                    await existing.delete();
+                }
+            });
+            cleanup.forEach(async (B)=>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
+                if(existing){
+                    await existing.delete();
+                }
+            });
+        } else if(game.user.isGM && O.actor.hasPlayerOwner && onlineOwners.length === 0){
+            buffs.forEach(async (B) =>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
+                if(existing){
+                    await existing.delete();
+                }
+            });
+            cleanup.forEach(async (B)=>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
+                if(existing){
+                    await existing.delete();
+                }
+            });
+        }
+        
         
         outBuffer.push(O);
     })
     
     let inBuffer = [];
     
+    
+    
     alliesInRadius.forEach(async (O)=>{
         if (inBuffer.includes(O)) return;
         
-        buffs.forEach(async (B) =>{
-            let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
-            if(!existing){
-                if(O.actor.isOwner) await O.actor.createEmbeddedDocuments('Item', [B]);
-                else socket.executeAsGM('addItemGuardian',O.actor,'Item',B);
-            }
-        });
-        cleanup.forEach(async (B)=>{
-            let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
-            if(existing){
-                if(O.actor.isOwner) await existing.delete();
-                else await socket.executeAsGM('deleteItemGuardian',existing);
-            }
-        });
+        let onlineOwners = game.users.filter(x=>!x.isGM && x.active && O.actor.data.permission.hasOwnProperty(x.id) && O.actor.data.permission[x.id] === 3);
+        
+        if(!game.user.isGM && O.actor.isOwner){
+            buffs.forEach(async (B) =>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
+                if(!existing){
+                    await O.actor.createEmbeddedDocuments('Item', [B]); 
+                }
+            });
+            cleanup.forEach(async (B)=>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
+                if(existing){
+                    await existing.delete();
+                }
+            });
+        }
+        else if(game.user.isGM && !O.actor.hasPlayerOwner){
+            buffs.forEach(async (B) =>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
+                if(!existing){
+                    await O.actor.createEmbeddedDocuments('Item', [B]); 
+                }
+            });
+            cleanup.forEach(async (B)=>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
+                if(existing){
+                    await existing.delete();
+                }
+            });
+        } else if(game.user.isGM && O.actor.hasPlayerOwner && onlineOwners.length === 0){
+            buffs.forEach(async (B) =>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B.flags.core.sourceId);
+                if(!existing){
+                    await O.actor.createEmbeddedDocuments('Item', [B]); 
+                }
+            });
+            cleanup.forEach(async (B)=>{
+                let existing = O.actor.itemTypes.effect.find((effect)=>effect.getFlag('core','sourceId') === B);
+                if(existing){
+                    await existing.delete();
+                }
+            });
+        }
+        
         inBuffer.push(O);
     })
 }

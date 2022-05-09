@@ -21,6 +21,9 @@ Hooks.on('updateCombat', async (document,data,diff,id) =>{
         let options = a.getRollOptions(['all']);
         if(!a) return;
         
+        if(!a.isOwner) return;
+        if(game.user.isGM) return;
+        
         if(options.includes("feat:bladesong-dedication")){
             let feat = options.includes("feat:shimmering-edge");
             
