@@ -3,27 +3,26 @@
 	"title": "PF2e - Vyklade's Book of Homebrew",
 	"description": "<p>A collection of Homebrew content created by u/yoshisman8!<p/><p>Find the complete collection over at:</p><p>https://scribe.pf2.tools/v/Lpmolb4Q-vyklade-s-book-of-homebrew</p>",
 	"author": "Vyklade",
-	"version": "5.1.1",
+	"version": "6.0.0",
 	"minimumCoreVersion": "9",
 	"compatibleCoreVersion": "9",
 	"system":[
 		"pf2e"
 	],
+    "relationships": {
+        "systems": [{
+            "id": "pf2e",
+            "type": "system",
+            "compatibility":{
+                "minimum": "3.13.5"
+            }
+        }]
+    },
     "scripts":[
-        "./scripts/bladesong.js",
-        "./scripts/virtues.js"
+        "./scripts/bladesong.js"
     ],
     "socket":true,
-	"dependencies": [
-		{
-			"name": "socketlib",
-			"manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/master/module.json"
-		},
-        {
-            "name": "warpgate",
-            "manifest": "https://raw.githubusercontent.com/trioderegion/warpgate/master/module.json"
-        }
-	],
+	"dependencies": [],
 	"packs": [
 		{
 			"name": "mystic-knight",
@@ -206,6 +205,15 @@
             "type": "Item",
             "name": "archmage",
             "path": "packs/archmage.db",
+            "system": "pf2e",
+            "module": "vyk-homebrew",
+            "entity": "Item"
+        },
+        {
+            "label": "Naturalist Magus",
+            "type": "Item",
+            "name": "naturalist-magus",
+            "path": "packs/naturalist-magus.db",
             "system": "pf2e",
             "module": "vyk-homebrew",
             "entity": "Item"

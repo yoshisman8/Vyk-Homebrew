@@ -20,6 +20,7 @@ This pack currently contains the following content:
 * [Chronomancer (Witch)](https://scribe.pf2.tools/v/PPTxMd0J-chronomancer)
 * [Jeweled Arcanist (Wizard)](https://scribe.pf2.tools/v/4lVFFbQs)
 * [Mystic Knight (Fighter)](https://scribe.pf2.tools/v/69Mdysm6-mystic-knight)
+* [Naturalist Magus (Magus)](https://scribe.pf2.tools/v/O5bVQL4j)
 * [Virtuous Guardian (Champion)](https://scribe.pf2.tools/v/MozbhYY6)
 
 ## Archetypes
@@ -35,6 +36,11 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 * Painterly Icons by [J. W. Bjerk](https://opengameart.org/content/painterly-spell-icons-part-1) [(Part 2)](http://opengameart.org/content/painterly-spell-icons-part-2) [(Part 3)](http://opengameart.org/content/painterly-spell-icons-part-3) [(Part 4)](http://opengameart.org/content/painterly-spell-icons-part-3) Under [CC 3.0](http://creativecommons.org/licenses/by/3.0/)
 
 # Changelog
+
+## Version 6.0.0
+
+* Added Naturalist Magus archetype
+* Migrated Virtuous Guardian to use new Aura rule elements
 
 ## Version 5.1.0
 
