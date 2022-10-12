@@ -13,9 +13,6 @@
       }
     ]
   },
-  "scripts": [
-    "scripts/bladesong.js"
-  ],
   "socket": true,
   "packs": [
     {
