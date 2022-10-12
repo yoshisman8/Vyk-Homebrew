@@ -1,317 +1,334 @@
 {
-	"name": "vyk-homebrew",
-	"title": "PF2e - Vyklade's Book of Homebrew",
-	"description": "<p>A collection of Homebrew content created by u/yoshisman8!<p/><p>Find the complete collection over at:</p><p>https://scribe.pf2.tools/v/Lpmolb4Q-vyklade-s-book-of-homebrew</p>",
-	"author": "Vyklade",
-	"version": "6.0.2",
-	"minimumCoreVersion": "9",
-	"compatibleCoreVersion": "9",
-	"system":[
-		"pf2e"
-	],
-    "relationships": {
-        "systems": [{
-            "id": "pf2e",
-            "type": "system",
-            "compatibility":{
-                "minimum": "3.13.5"
-            }
-        }]
-    },
-    "scripts":[
-        "./scripts/bladesong.js"
-    ],
-    "socket":true,
-	"dependencies": [],
-	"packs": [
-		{
-			"name": "mystic-knight",
-			"label": "Mystic Knight",
-			"path": "packs/mystic-knight.db",
-			"system":"pf2e",
-			"entity": "Item",
-			"module": "vyk-homebrew"
-		},
-		{
-		  "label": "Mystic Knight Macros",
-		  "entity": "Macro",
-		  "name": "mystic-knight-macros",
-		  "path": "packs/mystic-knight-macros.db",
-		  "system": "pf2e",
-		  "module": "vyk-homebrew"
-		},
-		{
-			"name": "jeweled-arcanist",
-			"label": "Jeweled Arcanist",
-			"path": "packs/jeweled-arcanist.db",
-			"system":"pf2e",
-			"entity": "Item",
-			"module": "vyk-homebrew"
-		},
-		{
-			"name": "reaper",
-			"label": "Reaper",
-			"path": "packs/reaper.db",
-			"system":"pf2e",
-			"entity": "Item",
-			"module": "vyk-homebrew"
-		},
-		{
-		  "label": "Reaper Macros",
-		  "entity": "Macro",
-		  "name": "reaper-macros",
-		  "path": "packs/reaper-macros.db",
-		  "system": "pf2e",
-		  "module": "vyk-homebrew"
-		},
-		{
-			"name": "artifact-sage",
-			"label": "Artifact Sage",
-			"path": "packs/artifact-sage.db",
-			"system":"pf2e",
-			"entity": "Item",
-			"module": "vyk-homebrew"
-		},
-		{
-		  "label": "Artifact Sage Macros",
-		  "entity": "Macro",
-		  "name": "artifact-sage-macros",
-		  "path": "packs/artifact-sage-macros.db",
-		  "system": "pf2e",
-		  "module": "vyk-homebrew"
-		},
-		{
-			"name": "charge-blade-knight",
-			"label": "Charge Blade Knight",
-			"path": "packs/charge-blade-knight.db",
-			"system":"pf2e",
-			"entity": "Item",
-			"module": "vyk-homebrew"
-		},
-		{
-		  "label": "Charge Blade Knight Macros",
-		  "entity": "Macro",
-		  "name": "charge-blade-knight-macros",
-		  "path": "packs/charge-blade-knight-macros.db",
-		  "system": "pf2e",
-		  "module": "vyk-homebrew"
-		},
-		{
-			"name": "buster",
-			"label": "Buster",
-			"path": "packs/buster.db",
-			"system":"pf2e",
-			"entity": "Item",
-			"module": "vyk-homebrew"
-		},
-		{
-			"name": "gunbreaker",
-			"label": "Gunbreaker",
-			"path": "packs/gunbreaker.db",
-			"system":"pf2e",
-			"entity": "Item",
-			"module": "vyk-homebrew"
-		},
-		{
-		  "label": "Gunbreaker Macros",
-		  "entity": "Macro",
-		  "name": "gunbreaker-macros",
-		  "path": "packs/gunbreaker-macros.db",
-		  "system": "pf2e",
-		  "module": "vyk-homebrew"
-		},
-		{
-			"name": "dragoon",
-			"label": "Dragoon",
-			"path": "packs/dragoon.db",
-			"system":"pf2e",
-			"entity": "Item",
-			"module": "vyk-homebrew"
-		},
-        {
-            "label": "Virtuous Guardian",
-            "type": "Item",
-            "name": "virtuous-guardian",
-            "path": "packs/virtuous-guardian.db",
-            "system": "pf2e",
-			"module": "vyk-homebrew",
-            "entity": "Item"
-        },
-        {
-            "label": "Bladesong",
-            "type": "Item",
-            "name": "bladesong",
-            "path": "packs/bladesong.db",
-            "system": "pf2e",
-			"module": "vyk-homebrew",
-            "entity": "Item"
-        },
-        {
-            "label": "Bladesong Macros",
-            "type": "Macro",
-            "name": "bladesong-macros",
-            "path": "packs/bladesong-macros.db",
-            "system": "pf2e",
-            "module": "vyk-homebrew",
-            "entity": "Macro"
-        },
-        {
-            "label": "Chronomancer",
-            "type": "Item",
-            "name": "chronomancer",
-            "path": "packs/chronomancer.db",
-            "system": "pf2e",
-			"module": "vyk-homebrew",
-            "entity": "Item"
-        },
-        {
-            "label": "Chronomancer Macros",
-            "type": "Macro",
-            "name": "chronomancer-macros",
-            "path": "packs/chronomancer-macros.db",
-            "system": "pf2e",
-            "module": "vyk-homebrew",
-            "entity": "Macro"
-        },
-        {
-            "label": "Silufae Ancestry",
-            "type": "Item",
-            "name": "silufae-ancestry",
-            "path": "packs/silufae-ancestry.db",
-            "system": "pf2e",
-			"module": "vyk-homebrew",
-            "entity": "Item"
-        },
-        {
-            "label": "Bladecaster",
-            "type": "Item",
-            "name": "bladecaster",
-            "path": "packs/bladecaster.db",
-            "system": "pf2e",
-			"module": "vyk-homebrew",
-            "entity": "Item"
-        },
-        {
-            "label": "Bladecaster Macros",
-            "type": "Macro",
-            "name": "bladecaster-macros",
-            "path": "packs/bladecaster-macros.db",
-            "system": "pf2e",
-            "module": "vyk-homebrew",
-            "entity": "Macro"
-        },
-        {
-            "label": "Archmage",
-            "type": "Item",
-            "name": "archmage",
-            "path": "packs/archmage.db",
-            "system": "pf2e",
-            "module": "vyk-homebrew",
-            "entity": "Item"
-        },
-        {
-            "label": "Naturalist Magus",
-            "type": "Item",
-            "name": "naturalist-magus",
-            "path": "packs/naturalist-magus.db",
-            "system": "pf2e",
-            "module": "vyk-homebrew",
-            "entity": "Item"
+  "title": "PF2e - Vyklade's Book of Homebrew",
+  "description": "<p>A collection of Homebrew content created by u/yoshisman8!</p><p></p><p>Find the complete collection over at:</p><p>https://scribe.pf2.tools/v/Lpmolb4Q-vyklade-s-book-of-homebrew</p>",
+  "version": "6.1.0",
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "3.13.5"
         }
-	],
-	"minimumSystemVersion": "3.1.3",
-	"flags": {
-		"vyk-homebrew": {
-			"pf2e-homebrew": {
-				"featTraits": {
-                    "silufae": "Silufae",
-                    "shatter1":"Shatter 1",
-                    "shatter2":"Shatter 2",
-                    "shatter3":"Shatter 3",
-                    "shatter4":"Shatter 4",
-                    "shatter5":"Shatter 5",
-                    "virtue":"Virtue",
-                    "brand":{
-                        "label":"Brand",
-                        "description":"<p>Brands are a special powers which channel the fire within your soul. You must be engaged in combat or otherwise be in active danger to activate a brand. When you activate a Brand, it remains active until combat ends, you use another Brand, fall unconscious or perform your Daily Preparations.</p><p>All brands generate an Aura around you, this aura has the Aura, Divine, Emotion, Magical, and Visual traits</p>"
-                    },
-					"blade-art": {
-						"label":"Blade Art",
-						"description":"<p>Blade Arts are special abilities unique to Mystic Knights. A Blade Art can only be performed once before needing to be <b>Recharge</b>.</p><p>You can Recharge all of your Blade Arts by spending 10 minutes doing the <b>Refocus</b> Activity.</p>"
-					},
-					"reaper": "Reaper",
-					"soul1": {
-						"label":"Soul 1",
-						"description":"<p>Feats or Soul Arts with this trait require Soul Shards equal to the value listed to activate.</p>"
-					},
-					"soul2": {
-						"label":"Soul 2",
-						"description":"<p>Feats or Soul Arts with this trait require Soul Shards equal to the value listed to activate.</p>"
-					},
-					"harvest": {
-						"label":"Harvest",
-						"description":"<p>Class Features, Feats, or Spells with this Trait can either generate Soul Shards, Hit Points, or Temporary HP. They must be a being with soulforce present within them, living or undead.</p><p>While you can use abilities with the Harvest Traits on beings without soulforce, such as Constructs, you cannot generate Soul Shards, Hit Points, or Temporary HP in doing so.</p>"
-					},
-					"windup":{
-						"label":"Wind Up",
-						"description":"<p>Feats or Soul Arts with this trait modify and enhance the next Strike you make on your Turn, even if that Strike is part of another Action.</p>"
-					},
-					"burst":{
-						"label":"Burst",
-						"description":"<p>Actions with the Burst trait require the expenditure of one or more charge blade <b>Charge</b>. This action expends </p>"
-					},
-					"buster":"Buster",
-					"trigger":{
-						"label":"Trigger",
-						"description":"<p> Actions with the Trigger Trait require the consumption of a <b>Charged Cartridge</b> contained within a Gunblade you are currently wielding. Regardless of the outcome of the action, the Cartridge is spent.</p>"
-					},
-					"dive":{
-						"label":"Dive",
-						"description":"<p>Certain actions from the Dragoon archetype contain the Dive trait. These actions can be executed as part of Dragoon Jump instead of a Strike.</p>"
-					}
-				  },
-				  "spellTraits": {
-                    "virtue":"Virtue",
-                    "bladesong":"Bladesong",
-                    "shatter1":"Shatter 1",
-                    "shatter2":"Shatter 2",
-                    "shatter3":"Shatter 3",
-                    "shatter4":"Shatter 4",
-                    "shatter5":"Shatter 5",
-					"egi": {
-						"label":"Egi",
-						"description":"Spells with the Egi trait can only be casted by a Jeweled Egi. The spell still utilizes the master's Spell Attack and Spell DC and uses one of their Focus Points."
-					},
-					"reaper": "Reaper",
-					"sage":"Sage",
-					"harvest": {
-						"label":"Harvest",
-						"description":"<p>Class Features, Feats, or Spells with this Trait can either generate Soul Shards, Hit Points, or Temporary HP. They must be a being with soulforce present within them, living or undead.</p><p>While you can use abilities with the Harvest Traits on beings without soulforce, such as Constructs, you cannot generate Soul Shards, Hit Points, or Temporary HP in doing so.</p>"
-					}
-				  },
-				  "weaponTraits":{
-					  "charge-blade":"Charge Blade",
-					  "cb-sword":"Charge Blade Sword",
-					  "gunblade":"Gunblade"
-				  },
-				  "weaponGroups":{
-					  "aegis":"Aegis"
-				  },
-				  "baseWeapons":{
-					  "aegis":"Aegis",
-					  "charge-blade":"Charge Blade",
-					  "charge-axe":"Charge Axe",
-					  "charge-shield":"Charge Shield",
-					  "gunblade":"Gunblade"
-				  },
-                  "creatureTraits":{
-                      "silufae":"Silufae"
-                  }
-
-			}
-		}
-	},
-	"url": "https://github.com/yoshisman8/Vyk-Homebrew",
-	"manifest": "https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/module.json",
-	"download": "https://github.com/yoshisman8/Vyk-Homebrew/archive/refs/heads/main.zip"
+      }
+    ]
+  },
+  "scripts": [
+    "scripts/bladesong.js"
+  ],
+  "socket": true,
+  "packs": [
+    {
+      "name": "mystic-knight",
+      "label": "Mystic Knight",
+      "path": "packs/mystic-knight.db",
+      "system": "pf2e",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Mystic Knight Macros",
+      "name": "mystic-knight-macros",
+      "path": "packs/mystic-knight-macros.db",
+      "system": "pf2e",
+      "type": "Macro",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "jeweled-arcanist",
+      "label": "Jeweled Arcanist",
+      "path": "packs/jeweled-arcanist.db",
+      "system": "pf2e",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "reaper",
+      "label": "Reaper",
+      "path": "packs/reaper.db",
+      "system": "pf2e",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Reaper Macros",
+      "name": "reaper-macros",
+      "path": "packs/reaper-macros.db",
+      "system": "pf2e",
+      "type": "Macro",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "artifact-sage",
+      "label": "Artifact Sage",
+      "path": "packs/artifact-sage.db",
+      "system": "pf2e",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Artifact Sage Macros",
+      "name": "artifact-sage-macros",
+      "path": "packs/artifact-sage-macros.db",
+      "system": "pf2e",
+      "type": "Macro",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "charge-blade-knight",
+      "label": "Charge Blade Knight",
+      "path": "packs/charge-blade-knight.db",
+      "system": "pf2e",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Charge Blade Knight Macros",
+      "name": "charge-blade-knight-macros",
+      "path": "packs/charge-blade-knight-macros.db",
+      "system": "pf2e",
+      "type": "Macro",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "buster",
+      "label": "Buster",
+      "path": "packs/buster.db",
+      "system": "pf2e",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "gunbreaker",
+      "label": "Gunbreaker",
+      "path": "packs/gunbreaker.db",
+      "system": "pf2e",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Gunbreaker Macros",
+      "name": "gunbreaker-macros",
+      "path": "packs/gunbreaker-macros.db",
+      "system": "pf2e",
+      "type": "Macro",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "dragoon",
+      "label": "Dragoon",
+      "path": "packs/dragoon.db",
+      "system": "pf2e",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Virtuous Guardian",
+      "type": "Item",
+      "name": "virtuous-guardian",
+      "path": "packs/virtuous-guardian.db",
+      "system": "pf2e",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Bladesong",
+      "type": "Item",
+      "name": "bladesong",
+      "path": "packs/bladesong.db",
+      "system": "pf2e",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Bladesong Macros",
+      "type": "Macro",
+      "name": "bladesong-macros",
+      "path": "packs/bladesong-macros.db",
+      "system": "pf2e",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Chronomancer",
+      "type": "Item",
+      "name": "chronomancer",
+      "path": "packs/chronomancer.db",
+      "system": "pf2e",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Chronomancer Macros",
+      "type": "Macro",
+      "name": "chronomancer-macros",
+      "path": "packs/chronomancer-macros.db",
+      "system": "pf2e",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Silufae Ancestry",
+      "type": "Item",
+      "name": "silufae-ancestry",
+      "path": "packs/silufae-ancestry.db",
+      "system": "pf2e",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Bladecaster",
+      "type": "Item",
+      "name": "bladecaster",
+      "path": "packs/bladecaster.db",
+      "system": "pf2e",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Bladecaster Macros",
+      "type": "Macro",
+      "name": "bladecaster-macros",
+      "path": "packs/bladecaster-macros.db",
+      "system": "pf2e",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Archmage",
+      "type": "Item",
+      "name": "archmage",
+      "path": "packs/archmage.db",
+      "system": "pf2e",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Naturalist Magus",
+      "type": "Item",
+      "name": "naturalist-magus",
+      "path": "packs/naturalist-magus.db",
+      "system": "pf2e",
+      "private": false,
+      "flags": {}
+    }
+  ],
+  "flags": {
+    "vyk-homebrew": {
+      "pf2e-homebrew": {
+        "featTraits": {
+          "silufae": "Silufae",
+          "shatter1": "Shatter 1",
+          "shatter2": "Shatter 2",
+          "shatter3": "Shatter 3",
+          "shatter4": "Shatter 4",
+          "shatter5": "Shatter 5",
+          "bladesong":"Bladesong",
+          "virtue": "Virtue",
+          "brand": {
+            "label": "Brand",
+            "description": "<p>Brands are a special powers which channel the fire within your soul. You must be engaged in combat or otherwise be in active danger to activate a brand. When you activate a Brand, it remains active until combat ends, you use another Brand, fall unconscious or perform your Daily Preparations.</p><p>All brands generate an Aura around you, this aura has the Aura, Divine, Emotion, Magical, and Visual traits</p>"
+          },
+          "blade-art": {
+            "label": "Blade Art",
+            "description": "<p>Blade Arts are special abilities unique to Mystic Knights. A Blade Art can only be performed once before needing to be <b>Recharge</b>.</p><p>You can Recharge all of your Blade Arts by spending 10 minutes doing the <b>Refocus</b> Activity.</p>"
+          },
+          "reaper": "Reaper",
+          "soul1": {
+            "label": "Soul 1",
+            "description": "<p>Feats or Soul Arts with this trait require Soul Shards equal to the value listed to activate.</p>"
+          },
+          "soul2": {
+            "label": "Soul 2",
+            "description": "<p>Feats or Soul Arts with this trait require Soul Shards equal to the value listed to activate.</p>"
+          },
+          "harvest": {
+            "label": "Harvest",
+            "description": "<p>Class Features, Feats, or Spells with this Trait can either generate Soul Shards, Hit Points, or Temporary HP. They must be a being with soulforce present within them, living or undead.</p><p>While you can use abilities with the Harvest Traits on beings without soulforce, such as Constructs, you cannot generate Soul Shards, Hit Points, or Temporary HP in doing so.</p>"
+          },
+          "windup": {
+            "label": "Wind Up",
+            "description": "<p>Feats or Soul Arts with this trait modify and enhance the next Strike you make on your Turn, even if that Strike is part of another Action.</p>"
+          },
+          "burst": {
+            "label": "Burst",
+            "description": "<p>Actions with the Burst trait require the expenditure of one or more charge blade <b>Charge</b>. This action expends </p>"
+          },
+          "buster": "Buster",
+          "trigger": {
+            "label": "Trigger",
+            "description": "<p> Actions with the Trigger Trait require the consumption of a <b>Charged Cartridge</b> contained within a Gunblade you are currently wielding. Regardless of the outcome of the action, the Cartridge is spent.</p>"
+          },
+          "dive": {
+            "label": "Dive",
+            "description": "<p>Certain actions from the Dragoon archetype contain the Dive trait. These actions can be executed as part of Dragoon Jump instead of a Strike.</p>"
+          }
+        },
+        "spellTraits": {
+          "virtue": "Virtue",
+          "bladesong": "Bladesong",
+          "shatter1": "Shatter 1",
+          "shatter2": "Shatter 2",
+          "shatter3": "Shatter 3",
+          "shatter4": "Shatter 4",
+          "shatter5": "Shatter 5",
+          "egi": {
+            "label": "Egi",
+            "description": "Spells with the Egi trait can only be casted by a Jeweled Egi. The spell still utilizes the master's Spell Attack and Spell DC and uses one of their Focus Points."
+          },
+          "reaper": "Reaper",
+          "sage": "Sage",
+          "harvest": {
+            "label": "Harvest",
+            "description": "<p>Class Features, Feats, or Spells with this Trait can either generate Soul Shards, Hit Points, or Temporary HP. They must be a being with soulforce present within them, living or undead.</p><p>While you can use abilities with the Harvest Traits on beings without soulforce, such as Constructs, you cannot generate Soul Shards, Hit Points, or Temporary HP in doing so.</p>"
+          }
+        },
+        "weaponTraits": {
+          "charge-blade": "Charge Blade",
+          "cb-sword": "Charge Blade Sword",
+          "gunblade": "Gunblade"
+        },
+        "weaponGroups": {
+          "aegis": "Aegis"
+        },
+        "baseWeapons": {
+          "aegis": "Aegis",
+          "charge-blade": "Charge Blade",
+          "charge-axe": "Charge Axe",
+          "charge-shield": "Charge Shield",
+          "gunblade": "Gunblade"
+        },
+        "creatureTraits": {
+          "silufae": "Silufae"
+        }
+      }
+    }
+  },
+  "url": "https://github.com/yoshisman8/Vyk-Homebrew",
+  "manifest": "https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/module.json",
+  "download": "https://github.com/yoshisman8/Vyk-Homebrew/archive/refs/heads/main.zip",
+  "id": "vyk-homebrew",
+  "authors": [
+    {
+      "name": "Vyklade",
+      "flags": {}
+    }
+  ],
+  "compatibility": {
+    "minimum": "9",
+    "verified": "9"
+  }
 }
