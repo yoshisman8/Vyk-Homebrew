@@ -1,331 +1,417 @@
 {
-  "title": "PF2e - Vyklade's Book of Homebrew",
-  "description": "<p>A collection of Homebrew content created by u/yoshisman8!</p><p></p><p>Find the complete collection over at:</p><p>https://scribe.pf2.tools/v/Lpmolb4Q-vyklade-s-book-of-homebrew</p>",
-  "version": "6.2.0",
-  "relationships": {
-    "systems": [
-      {
-        "id": "pf2e",
-        "type": "system",
-        "compatibility": {
-          "minimum": "3.13.5"
+    "title": "PF2e - Vyklade's Book of Homebrew",
+    "description": "<p>A collection of Homebrew content created by u/yoshisman8!</p><p></p><p>Find the complete collection over at:</p><p>https://scribe.pf2.tools/v/Lpmolb4Q-vyklade-s-book-of-homebrew</p>",
+    "version": "6.6.0",
+    "relationships": {
+        "systems": [
+            {
+                "id": "pf2e",
+                "type": "system",
+                "compatibility": {
+                    "minimum": "5.1.0"
+                }
+            }
+        ]
+    },
+    "socket": true,
+    "packs": [
+        {
+            "name": "vyk-journals",
+            "label": "Catalog",
+            "path": "packs/vyk-journals.db",
+            "system": "pf2e",
+            "type": "JournalEntry",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "White Druid Feats/Features",
+            "name": "white-druid-feats-features",
+            "path": "packs/white-druid-feats-features.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "Dragoon Feats",
+            "name": "dragoon-feats",
+            "path": "packs/dragoon-feats.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "Dragoon Spells",
+            "name": "dragoon-spells",
+            "path": "packs/dragoon-spells.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "Dragoon Actions & Effects",
+            "name": "dragoon-actions-effects",
+            "path": "packs/dragoon-actions.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "Holy Knight Actions/Effects",
+            "name": "holy-knight-actions-effects",
+            "path": "packs/holy-knight-actions-effects.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "Holy Knight Feats/Features",
+            "name": "holy-knight-feats-features",
+            "path": "packs/holy-knight-feats-features.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "Holy Knight Spells",
+            "name": "holy-knight-spells",
+            "path": "packs/holy-knight-spells.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "Conduit Actions/Effects",
+            "name": "conduit-actions-effects",
+            "path": "packs/conduit-actions-effects.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "Conduit Feats/Features",
+            "name": "conduit-feats-features",
+            "path": "packs/conduit-feats-features.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "Exemplar Actions/Effects",
+            "name": "exemplar-actions-effects",
+            "path": "packs/exemplar-actions-effects.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "Exemplar Feats/Features",
+            "name": "exemplar-feats-features",
+            "path": "packs/exemplar-feats-features.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "Dark Knight Feats/Features",
+            "name": "dark-knight-feats-features",
+            "path": "packs/dark-knight-feats-features.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "Dark Knight Actions/Effects",
+            "name": "dark-knight-actions-effects",
+            "path": "packs/dark-knight-actions-effects.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "Red Mage Actions/Effects",
+            "name": "red-mage-actions-effects",
+            "path": "packs/red-mage-actions-effects.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "Red Mage Feats/Features",
+            "name": "red-mage-feats-features",
+            "path": "packs/red-mage-feats-features.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "Red Mage Spells",
+            "name": "red-mage-spells",
+            "path": "packs/red-mage-spells.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "Red Mage Items",
+            "name": "red-mage-items",
+            "path": "packs/red-mage-items.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
         }
-      }
-    ]
-  },
-  "socket": true,
-  "packs": [
-    {
-      "name": "mystic-knight",
-      "label": "Mystic Knight",
-      "path": "packs/mystic-knight.db",
-      "system": "pf2e",
-      "type": "Item",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "label": "Mystic Knight Macros",
-      "name": "mystic-knight-macros",
-      "path": "packs/mystic-knight-macros.db",
-      "system": "pf2e",
-      "type": "Macro",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "name": "jeweled-arcanist",
-      "label": "Jeweled Arcanist",
-      "path": "packs/jeweled-arcanist.db",
-      "system": "pf2e",
-      "type": "Item",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "name": "reaper",
-      "label": "Reaper",
-      "path": "packs/reaper.db",
-      "system": "pf2e",
-      "type": "Item",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "label": "Reaper Macros",
-      "name": "reaper-macros",
-      "path": "packs/reaper-macros.db",
-      "system": "pf2e",
-      "type": "Macro",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "name": "artifact-sage",
-      "label": "Artifact Sage",
-      "path": "packs/artifact-sage.db",
-      "system": "pf2e",
-      "type": "Item",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "label": "Artifact Sage Macros",
-      "name": "artifact-sage-macros",
-      "path": "packs/artifact-sage-macros.db",
-      "system": "pf2e",
-      "type": "Macro",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "name": "charge-blade-knight",
-      "label": "Charge Blade Knight",
-      "path": "packs/charge-blade-knight.db",
-      "system": "pf2e",
-      "type": "Item",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "label": "Charge Blade Knight Macros",
-      "name": "charge-blade-knight-macros",
-      "path": "packs/charge-blade-knight-macros.db",
-      "system": "pf2e",
-      "type": "Macro",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "name": "buster",
-      "label": "Buster",
-      "path": "packs/buster.db",
-      "system": "pf2e",
-      "type": "Item",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "name": "gunbreaker",
-      "label": "Gunbreaker",
-      "path": "packs/gunbreaker.db",
-      "system": "pf2e",
-      "type": "Item",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "label": "Gunbreaker Macros",
-      "name": "gunbreaker-macros",
-      "path": "packs/gunbreaker-macros.db",
-      "system": "pf2e",
-      "type": "Macro",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "name": "dragoon",
-      "label": "Dragoon",
-      "path": "packs/dragoon.db",
-      "system": "pf2e",
-      "type": "Item",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "label": "Virtuous Guardian",
-      "type": "Item",
-      "name": "virtuous-guardian",
-      "path": "packs/virtuous-guardian.db",
-      "system": "pf2e",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "label": "Bladesong",
-      "type": "Item",
-      "name": "bladesong",
-      "path": "packs/bladesong.db",
-      "system": "pf2e",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "label": "Bladesong Macros",
-      "type": "Macro",
-      "name": "bladesong-macros",
-      "path": "packs/bladesong-macros.db",
-      "system": "pf2e",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "label": "Chronomancer",
-      "type": "Item",
-      "name": "chronomancer",
-      "path": "packs/chronomancer.db",
-      "system": "pf2e",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "label": "Chronomancer Macros",
-      "type": "Macro",
-      "name": "chronomancer-macros",
-      "path": "packs/chronomancer-macros.db",
-      "system": "pf2e",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "label": "Silufae Ancestry",
-      "type": "Item",
-      "name": "silufae-ancestry",
-      "path": "packs/silufae-ancestry.db",
-      "system": "pf2e",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "label": "Bladecaster",
-      "type": "Item",
-      "name": "bladecaster",
-      "path": "packs/bladecaster.db",
-      "system": "pf2e",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "label": "Bladecaster Macros",
-      "type": "Macro",
-      "name": "bladecaster-macros",
-      "path": "packs/bladecaster-macros.db",
-      "system": "pf2e",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "label": "Archmage",
-      "type": "Item",
-      "name": "archmage",
-      "path": "packs/archmage.db",
-      "system": "pf2e",
-      "private": false,
-      "flags": {}
-    },
-    {
-      "label": "Naturalist Magus",
-      "type": "Item",
-      "name": "naturalist-magus",
-      "path": "packs/naturalist-magus.db",
-      "system": "pf2e",
-      "private": false,
-      "flags": {}
-    }
-  ],
-  "flags": {
-    "vyk-homebrew": {
-      "pf2e-homebrew": {
-        "featTraits": {
-          "silufae": "Silufae",
-          "shatter1": "Shatter 1",
-          "shatter2": "Shatter 2",
-          "shatter3": "Shatter 3",
-          "shatter4": "Shatter 4",
-          "shatter5": "Shatter 5",
-          "bladesong":"Bladesong",
-          "virtue": "Virtue",
-          "brand": {
-            "label": "Brand",
-            "description": "<p>Brands are a special powers which channel the fire within your soul. You must be engaged in combat or otherwise be in active danger to activate a brand. When you activate a Brand, it remains active until combat ends, you use another Brand, fall unconscious or perform your Daily Preparations.</p><p>All brands generate an Aura around you, this aura has the Aura, Divine, Emotion, Magical, and Visual traits</p>"
-          },
-          "blade-art": {
-            "label": "Blade Art",
-            "description": "<p>Blade Arts are special abilities unique to Mystic Knights. A Blade Art can only be performed once before needing to be <b>Recharge</b>.</p><p>You can Recharge all of your Blade Arts by spending 10 minutes doing the <b>Refocus</b> Activity.</p>"
-          },
-          "reaper": "Reaper",
-          "soul1": {
-            "label": "Soul 1",
-            "description": "<p>Feats or Soul Arts with this trait require Soul Shards equal to the value listed to activate.</p>"
-          },
-          "soul2": {
-            "label": "Soul 2",
-            "description": "<p>Feats or Soul Arts with this trait require Soul Shards equal to the value listed to activate.</p>"
-          },
-          "harvest": {
-            "label": "Harvest",
-            "description": "<p>Class Features, Feats, or Spells with this Trait can either generate Soul Shards, Hit Points, or Temporary HP. They must be a being with soulforce present within them, living or undead.</p><p>While you can use abilities with the Harvest Traits on beings without soulforce, such as Constructs, you cannot generate Soul Shards, Hit Points, or Temporary HP in doing so.</p>"
-          },
-          "windup": {
-            "label": "Wind Up",
-            "description": "<p>Feats or Soul Arts with this trait modify and enhance the next Strike you make on your Turn, even if that Strike is part of another Action.</p>"
-          },
-          "burst": {
-            "label": "Burst",
-            "description": "<p>Actions with the Burst trait require the expenditure of one or more charge blade <b>Charge</b>. This action expends </p>"
-          },
-          "buster": "Buster",
-          "trigger": {
-            "label": "Trigger",
-            "description": "<p> Actions with the Trigger Trait require the consumption of a <b>Charged Cartridge</b> contained within a Gunblade you are currently wielding. Regardless of the outcome of the action, the Cartridge is spent.</p>"
-          },
-          "dive": {
-            "label": "Dive",
-            "description": "<p>Certain actions from the Dragoon archetype contain the Dive trait. These actions can be executed as part of Dragoon Jump instead of a Strike.</p>"
-          }
-        },
-        "spellTraits": {
-          "virtue": "Virtue",
-          "bladesong": "Bladesong",
-          "shatter1": "Shatter 1",
-          "shatter2": "Shatter 2",
-          "shatter3": "Shatter 3",
-          "shatter4": "Shatter 4",
-          "shatter5": "Shatter 5",
-          "egi": {
-            "label": "Egi",
-            "description": "Spells with the Egi trait can only be casted by a Jeweled Egi. The spell still utilizes the master's Spell Attack and Spell DC and uses one of their Focus Points."
-          },
-          "reaper": "Reaper",
-          "sage": "Sage",
-          "harvest": {
-            "label": "Harvest",
-            "description": "<p>Class Features, Feats, or Spells with this Trait can either generate Soul Shards, Hit Points, or Temporary HP. They must be a being with soulforce present within them, living or undead.</p><p>While you can use abilities with the Harvest Traits on beings without soulforce, such as Constructs, you cannot generate Soul Shards, Hit Points, or Temporary HP in doing so.</p>"
-          }
-        },
-        "weaponTraits": {
-          "charge-blade": "Charge Blade",
-          "cb-sword": "Charge Blade Sword",
-          "gunblade": "Gunblade"
-        },
-        "weaponGroups": {
-          "aegis": "Aegis"
-        },
-        "baseWeapons": {
-          "aegis": "Aegis",
-          "charge-blade": "Charge Blade",
-          "charge-axe": "Charge Axe",
-          "charge-shield": "Charge Shield",
-          "gunblade": "Gunblade"
-        },
-        "creatureTraits": {
-          "silufae": "Silufae"
+    ],
+    "packFolders": [
+        {
+            "name": "Vyklade's Book of Homebrew",
+            "sorting": "a",
+            "packs": [
+                "vyk-journals"
+            ],
+            "folders": [
+                {
+                    "name":"Class Archetypes",
+                    "sorting": "a",
+                    "folders" : [
+                        {
+                            "name" : "White Druid",
+                            "sorting": "a",
+                            "packs":[
+                                "white-druid-feats-features"
+                            ]
+                        },
+                        {
+                            "name" : "Holy Knight",
+                            "sorting": "a",
+                            "packs":[
+                                "holy-knight-actions-effects",
+                                "holy-knight-feats-features",
+                                "holy-knight-spells"
+                            ]
+                        },
+                        {
+                            "name" : "Conduit",
+                            "sorting": "a",
+                            "packs":[
+                                "conduit-actions-effects",
+                                "conduit-feats-features"
+                            ]
+                        },
+                        {
+                            "name" : "Dark Knigt",
+                            "sorting": "a",
+                            "packs":[
+                                "dark-knight-actions-effects",
+                                "dark-knight-feats-features"
+                            ]
+                        },
+                        {
+                            "name" : "Red Mage",
+                            "sorting": "a",
+                            "packs":[
+                                "red-mage-actions-effects",
+                                "red-mage-feats-features",
+                                "red-mage-spells",
+                                "red-mage-items"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name":"Archetypes",
+                    "sorting": "a",
+                    "folders" : [
+                        {
+                            "name" : "Dragoon",
+                            "sorting": "a",
+                            "packs":[
+                                "dragoon-feats",
+                                "dragoon-spells",
+                                "dragoon-actions-effects"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name":"Classes",
+                    "sorting": "a",
+                    "folders" : [
+                        {
+                            "name" : "Exemplar",
+                            "sorting": "a",
+                            "packs":[
+                                "exemplar-actions-effects",
+                                "exemplar-feats-features"
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
-      }
+    ],
+    "flags": {
+        "vyk-homebrew": {
+            "pf2e-homebrew": {
+                "featTraits": {
+                    "flair": {
+                        "label": "Flair",
+                        "description" : "Actions or Spells with this trait are powerful, finishing blows which end your Arcane Cascade once the action is finished. As such you must be in Arcane Cascade stance to perform them. If the action also has the Metamagic or Wind-Up traits, Arcane Cascade ends after the augmented Spell or Strike is made."
+                    },
+                    "dual": {
+                        "label": "Dual",
+                        "description" : "Actions or Spells with this trait count as both a Strike and a Spell at the same time for the purposes of entering Arcane Cascade, and thus allow you to choose whether to augment a Strike or a Cantrip when using Enchanted Assault."
+                    },
+                    "exemplar":"Exemplar",
+                    "legend": {
+                        "label": "Legend",
+                        "description" : "Actions or Spells with the Legend trait require you to be channeling any one legend by being in a Legendary Stance. This can be any of your available Legendary Stances."
+                    },
+                    "dire":{
+                        "label" :"Dire",
+                        "description": "actions require danger as a catalyst, and are only effective in Encounter Mode where the threads of fate become less certain and more susceptible to your manipulation."
+                    },
+                    "shirren": "Shirren",
+                    "astral-knight": "Astral Knight",
+                    "power": {
+                        "label": "Power",
+                        "description": "<p>Actions with the Power trait require the consumption of one <b>Astral Point</b>. Astral Knights typically gain 1 Astral Point at the start of each of their turns. Actions with the Power trait also gain the Magical and Occult traits.</p>"
+                    },
+                    "silufae": "Silufae",
+                    "shatter1": "Shatter 1",
+                    "shatter2": "Shatter 2",
+                    "shatter3": "Shatter 3",
+                    "shatter4": "Shatter 4",
+                    "shatter5": "Shatter 5",
+                    "bladesong": "Bladesong",
+                    "virtue": "Virtue",
+                    "brand": {
+                        "label": "Brand",
+                        "description": "<p>Brands are a special powers which channel the fire within your soul. You must be engaged in combat or otherwise be in active danger to activate a brand. When you activate a Brand, it remains active until combat ends, you use another Brand, fall unconscious or perform your Daily Preparations.</p><p>All brands generate an Aura around you, this aura has the Aura, Divine, Emotion, Magical, and Visual traits</p>"
+                    },
+                    "blade-art": {
+                        "label": "Blade Art",
+                        "description": "<p>Blade Arts are special abilities unique to Mystic Knights. A Blade Art can only be performed once before needing to be <b>Recharge</b>.</p><p>You can Recharge all of your Blade Arts by spending 10 minutes doing the <b>Refocus</b> Activity.</p>"
+                    },
+                    "reaper": "Reaper",
+                    "soul1": {
+                        "label": "Soul 1",
+                        "description": "<p>Feats or Soul Arts with this trait require Soul Shards equal to the value listed to activate.</p>"
+                    },
+                    "soul2": {
+                        "label": "Soul 2",
+                        "description": "<p>Feats or Soul Arts with this trait require Soul Shards equal to the value listed to activate.</p>"
+                    },
+                    "harvest": {
+                        "label": "Harvest",
+                        "description": "Class Features, Feats, or Spells with this Trait can either generate Soul Shards, Hit Points, or Temporary HP. They must be a being with soulforce present within them, living or undead.</p><p>While you can use abilities with the Harvest Traits on beings without soulforce, such as Constructs, you cannot generate Soul Shards, Hit Points, or Temporary HP in doing so."
+                    },
+                    "wind-up": {
+                        "label": "Wind Up",
+                        "description": "Feats or Soul Arts with this trait modify and enhance the next Strike you make on your Turn, even if that Strike is part of another Action."
+                    },
+                    "burst": {
+                        "label": "Burst",
+                        "description": "<p>Actions with the Burst trait require the expenditure of one or more charge blade <b>Charge</b>. This action expends </p>"
+                    },
+                    "buster": "Buster",
+                    "trigger": {
+                        "label": "Trigger",
+                        "description": "<p> Actions with the Trigger Trait require the consumption of a <b>Charged Cartridge</b> contained within a Gunblade you are currently wielding. Regardless of the outcome of the action, the Cartridge is spent.</p>"
+                    }
+                },
+                "spellTraits": {
+                    "dual": {
+                        "label": "Dual",
+                        "description" : "Actions or Spells with this trait count as both a Strike and a Spell at the same time for the purposes of entering Arcane Cascade, and thus allow you to choose whether to augment a Strike or a Cantrip when using Enchanted Assault."
+                    },
+                    "aegis": "Aegis",
+                    "virtue": "Virtue",
+                    "bladesong": "Bladesong",
+                    "shatter1": "Shatter 1",
+                    "shatter2": "Shatter 2",
+                    "shatter3": "Shatter 3",
+                    "shatter4": "Shatter 4",
+                    "shatter5": "Shatter 5",
+                    "egi": {
+                        "label": "Egi",
+                        "description": "Spells with the Egi trait can only be casted by a Jeweled Egi. The spell still utilizes the master's Spell Attack and Spell DC and uses one of their Focus Points."
+                    },
+                    "reaper": "Reaper",
+                    "sage": "Sage",
+                    "harvest": {
+                        "label": "Harvest",
+                        "description": "<p>Class Features, Feats, or Spells with this Trait can either generate Soul Shards, Hit Points, or Temporary HP. They must be a being with soulforce present within them, living or undead.</p><p>While you can use abilities with the Harvest Traits on beings without soulforce, such as Constructs, you cannot generate Soul Shards, Hit Points, or Temporary HP in doing so.</p>"
+                    }
+                },
+                "weaponTraits": {
+                    "dual": "Dual",
+                    "jolt": "Jolt",
+                    "aegis": "Aegis",
+                    "charge-blade": "Charge Blade",
+                    "cb-sword": "Charge Blade Sword",
+                    "gunblade": "Gunblade",
+                    "regalia": "Regalia",
+                    "comet-regalia": "Comet",
+                    "asteroid-regalia": "Asteroid",
+                    "moon-regalia": "Moon",
+                    "star-regalia": "Star",
+                    "primary": "Primary",
+                    "secondary":"Secondary",
+                    "ranged": "Ranged"
+                },
+                "weaponGroups": {
+                    "aegis": "Aegis"
+                },
+                "baseWeapons": {
+                    "aegis": "Aegis",
+                    "charge-blade": "Charge Blade",
+                    "charge-axe": "Charge Axe",
+                    "charge-shield": "Charge Shield",
+                    "gunblade": "Gunblade",
+                    "comet-regalia": "Comet Regalia",
+                    "asteroid-regalia": "Asteroid Regalia",
+                    "moon-regalia": "Moon Regalia",
+                    "star-regalia": "Star Regalia"
+                },
+                "creatureTraits": {
+                    "silufae": "Silufae",
+                    "shirren": "Shirren"
+                },
+                "languages": {
+                    "shirren": "Shirren"
+                }
+            }
+        }
+    },
+    "url": "https://github.com/yoshisman8/Vyk-Homebrew",
+    "manifest": "https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/module.json",
+    "download": "https://github.com/yoshisman8/Vyk-Homebrew/archive/refs/heads/main.zip",
+    "id": "vyk-homebrew",
+    "authors": [
+        {
+            "name": "Vyklade",
+            "flags": {}
+        }
+    ],
+    "compatibility": {
+        "minimum": "11",
+        "verified": "11"
     }
-  },
-  "url": "https://github.com/yoshisman8/Vyk-Homebrew",
-  "manifest": "https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/module.json",
-  "download": "https://github.com/yoshisman8/Vyk-Homebrew/archive/refs/heads/main.zip",
-  "id": "vyk-homebrew",
-  "authors": [
-    {
-      "name": "Vyklade",
-      "flags": {}
-    }
-  ],
-  "compatibility": {
-    "minimum": "9",
-    "verified": "9"
-  }
 }
