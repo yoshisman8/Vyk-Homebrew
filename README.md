@@ -6,27 +6,18 @@ You can find the entire collection over at my [Scribe Page](https://scribe.pf2.t
 
 This pack currently contains the following content:
 
-## Ancestries
-* [Silufae (Ancestry)](https://scribe.pf2.tools/v/ZqPSbH75)
-
 ## Classes
-* [Buster](https://scribe.pf2.tools/v/Cm82Svvj)
-* [Reaper](https://scribe.pf2.tools/v/5mOhtZcQ)
+* [Exemplar](https://scribe.pf2.tools/v/FzWSCYfM-exemplar)
 
 ## Class Archetypes
-* [Archmage (Wizard)](https://scribe.pf2.tools/v/sWd8y78x)
-* [Artifact Sage (Wizard)](https://scribe.pf2.tools/v/8Vtwvw6d)
-* [Bladecaster (Swashbuckler)](https://scribe.pf2.tools/v/p2Hb2Xf1)
-* [Chronomancer (Witch)](https://scribe.pf2.tools/v/PPTxMd0J-chronomancer)
-* [Jeweled Arcanist (Wizard)](https://scribe.pf2.tools/v/4lVFFbQs)
-* [Mystic Knight (Fighter)](https://scribe.pf2.tools/v/69Mdysm6-mystic-knight)
-* [Naturalist Magus (Magus)](https://scribe.pf2.tools/v/O5bVQL4j)
-* [Virtuous Guardian (Champion)](https://scribe.pf2.tools/v/MozbhYY6)
+* [Conduit](https://scribe.pf2.tools/v/vdbLwl4R-conduit)
+* [Dark Knight](https://scribe.pf2.tools/v/wf9zW0Cq)
+* [Holy Knight](https://scribe.pf2.tools/v/2Jr09Whq-holy-knight)
+* [Red Mage](http://scribe.pf2.tools/v/oQXlT0L0-red-mage)
+* [White Druid](https://scribe.pf2.tools/v/24c6St0o-white-druid)
 
 ## Archetypes
-* [Bladesong](https://scribe.pf2.tools/v/ppCwjmZP)
-* [Dragoon](https://scribe.pf2.tools/v/JxSo1xSR)
-* [Gunbreaker](https://scribe.pf2.tools/v/rz4YO5dl)
+* [Dragoon](https://scribe.pf2.tools/v/pJcWsTRf)
 
 
 Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/module.json](https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/module.json)
@@ -36,6 +27,8 @@ Manifest url: [https://raw.githubusercontent.com/yoshisman8/Vyk-Homebrew/main/mo
 * Painterly Icons by [J. W. Bjerk](https://opengameart.org/content/painterly-spell-icons-part-1) [(Part 2)](http://opengameart.org/content/painterly-spell-icons-part-2) [(Part 3)](http://opengameart.org/content/painterly-spell-icons-part-3) [(Part 4)](http://opengameart.org/content/painterly-spell-icons-part-3) Under [CC 3.0](http://creativecommons.org/licenses/by/3.0/)
 
 # Changelog
+## Version 6.6.0
+* Re-did the entire module from the ground up. Content to be added back slowly
 
 ## Version 6.0.0
 
