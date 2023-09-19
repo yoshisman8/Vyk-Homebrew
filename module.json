@@ -1,7 +1,7 @@
 {
     "title": "PF2e - Vyklade's Book of Homebrew",
     "description": "<p>A collection of Homebrew content created by u/yoshisman8!</p><p></p><p>Find the complete collection over at:</p><p>https://scribe.pf2.tools/v/Lpmolb4Q-vyklade-s-book-of-homebrew</p>",
-    "version": "6.6.0",
+    "version": "6.6.2",
     "relationships": {
         "systems": [
             {
@@ -176,6 +176,33 @@
             "type": "Item",
             "private": false,
             "flags": {}
+        },
+        {
+            "label": "Silufae Feats",
+            "name": "silufae-feats",
+            "path": "packs/silufae-feats.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "Silufae Heritages",
+            "name": "silufae-heritages",
+            "path": "packs/silufae-heritages.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
+        },
+        {
+            "label": "Ancestries",
+            "name": "ancestries",
+            "path": "packs/ancestries.db",
+            "system": "pf2e",
+            "type": "Item",
+            "private": false,
+            "flags": {}
         }
     ],
     "packFolders": [
@@ -259,6 +286,20 @@
                             "packs":[
                                 "exemplar-actions-effects",
                                 "exemplar-feats-features"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name":"Ancestries",
+                    "sorting": "a",
+                    "packs": [ "ancestries" ],
+                    "folders": [
+                        {
+                            "name": "Silufae",
+                            "packs": [
+                                "silufae-feats",
+                                "silufae-heritages"
                             ]
                         }
                     ]
